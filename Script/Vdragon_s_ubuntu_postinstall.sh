@@ -128,6 +128,7 @@ echo -e '
 =======================================
 安裝Pidgin即時通訊軟體
 ======================================='
+echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes ppa:pidgin-developers/ppa
 sudo apt-get --assume-yes --allow-unauthenticated install pidgin
 
@@ -135,8 +136,8 @@ echo -e "
 =======================================
 安裝Virtualbox虛擬機器軟體
 ======================================="
-##設定環境變數
 read -p "請輸入您的使用者帳號名稱：" user_name
+echo -e "新增軟體來源中，請稍候…"
 #加入Virtualbox的官方軟體來源
 sudo add-apt-repository --yes "deb http://download.virtualbox.org/virtualbox/debian `lsb_release --short --codename` contrib"
 sudo add-apt-repository --remove "deb-src http://download.virtualbox.org/virtualbox/debian `lsb_release --short --codename` contrib" > /dev/null
@@ -153,6 +154,7 @@ echo -e "
 =======================================
 安裝 Unity 桌面環境
 ======================================="
+echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes ppa:unity-team/ppa
 sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install unity
@@ -161,6 +163,7 @@ echo -e "
 =======================================
 安裝 Boot-Repair 開機載入程式修復工具
 ======================================="
+echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes ppa:yannubuntu/boot-repair
 sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install boot-repair
@@ -169,6 +172,7 @@ echo -e "
 =======================================
 安裝GNOME 3桌面環境軟體系列
 ======================================="
+echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes ppa:gnome3-team/gnome3
 sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install gnome
@@ -177,16 +181,18 @@ echo -e "
 =======================================
 安裝Google Chrome網頁瀏覽器
 ======================================="
-#加入Virtualbox的官方軟體來源
+echo -e "新增軟體來源中，請稍候…"
+#加入Google Chrome的官方軟體來源
 sudo add-apt-repository --yes "deb http://dl.google.com/linux/chrome/deb/ stable main"
 sudo add-apt-repository --remove "deb-src http://dl.google.com/linux/chrome/deb/ stable main" > /dev/null
-sudo apt-fast update
-sudo apt-fast --assume-yes --allow-unauthenticated install google-chrome-stable
+sudo apt-get update
+sudo apt-get --assume-yes --allow-unauthenticated install google-chrome-stable
 
 echo -e '
 =======================================
 安裝burg開機載入程式
 ======================================='
+echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes ppa:n-muench/burg
 sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install burg
@@ -200,6 +206,7 @@ echo -e '
 　Eclipse CDT plugin
 　g++ C++ toolchain
 ======================================='
+echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes ppa:git-core/ppa
 sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install git eclipse eclipse-cdt g++
@@ -208,6 +215,7 @@ echo -e '
 =======================================
 安裝姬(H.I.M.E.)輸入法
 ======================================='
+echo -e "新增軟體來源中，請稍候…"
 #sudo add-apt-repository --yes ppa:hime-team/hime
 sudo add-apt-repository --yes "deb http://debian.luna.com.tw/`lsb_release --short --codename` ./"
 sudo apt-get update
@@ -223,6 +231,7 @@ echo -e '
 =======================================
 安裝VLC影音播放軟體
 ======================================='
+echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes ppa:videolan/stable-daily
 sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install vlc
@@ -231,6 +240,7 @@ echo -e '
 =======================================
 安裝LibreOffice 辦公室應用套裝軟體 3.5.x
 ======================================='
+echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes ppa:libreoffice/libreoffice-3-5
 sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install libreoffice libreoffice-gnome libreoffice-kde
@@ -239,6 +249,7 @@ echo -e '
 =======================================
 安裝Grub Customizer Grub開機載入程式設定工具
 ======================================='
+echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes ppa:danielrichter2007/grub-customizer
 sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install grub-customizer
@@ -247,6 +258,7 @@ echo -e '
 =======================================
 安裝Wine Windows平台程式相容層
 ======================================='
+echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes ppa:ubuntu-wine/ppa
 sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install wine
@@ -255,6 +267,7 @@ echo -e '
 =======================================
 安裝 Dropbox
 ======================================='
+echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes "deb http://linux.dropbox.com/ubuntu `lsb_release --short --codename` main"
 sudo add-apt-repository --remove "deb-src http://linux.dropbox.com/ubuntu `lsb_release --short --codename` main" > /dev/null
 sudo apt-get update
