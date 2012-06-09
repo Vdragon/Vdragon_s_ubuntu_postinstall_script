@@ -64,12 +64,6 @@ sudo apt-get --assume-yes --allow-unauthenticated install python-software-proper
 
 echo -e '
 =======================================
-安裝Vim文字編輯器
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install vim
-
-echo -e '
-=======================================
 安裝Aptitude、Synaptic軟體包裹管理程式
 ======================================='
 sudo apt-get --assume-yes --allow-unauthenticated install synaptic aptitude
@@ -81,6 +75,55 @@ echo -e '
 ======================================='
 sudo apt-get --assume-yes --allow-unauthenticated install ubuntu-restricted-extras
 
+echo -e '
+=======================================
+安裝Vim文字編輯器
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install vim
+
+echo -e '
+=======================================
+安裝htop系統資源監視程式
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install htop
+
+echo -e '
+=======================================
+安裝localepurge語系資料清除工具
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install localepurge
+
+echo -e "
+=======================================
+安裝K桌面環境(K Desktop Environment)軟體系列
+======================================="
+sudo apt-get --assume-yes --allow-unauthenticated install kde-standard kdesudo kde-l10n-zhtw kdesdk-dolphin-plugins
+
+echo -e '
+=======================================
+安裝 make-kpkg Linux Kernel軟體包裹製作工具
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install kernel-package fakeroot
+
+echo -e '
+=======================================
+安裝 bleachbit 檔案清理工具
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install bleachbit
+
+echo -e '
+=======================================
+安裝 ppa-purge PPA還原程式
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install ppa-purge
+
+echo -e '
+=======================================
+安裝 powertop 電力消耗監視程式
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install powertop
+
+#=====需要新增軟體來源的軟體=====
 echo -e '
 =======================================
 安裝Pidgin即時通訊軟體
@@ -124,12 +167,6 @@ sudo apt-get --assume-yes --allow-unauthenticated install boot-repair
 
 echo -e "
 =======================================
-安裝K桌面環境(K Desktop Environment)軟體系列
-======================================="
-sudo apt-get --assume-yes --allow-unauthenticated install kde-standard kdesudo kde-l10n-zhtw kdesdk-dolphin-plugins
-
-echo -e "
-=======================================
 安裝GNOME 3桌面環境軟體系列
 ======================================="
 sudo add-apt-repository --yes ppa:gnome3-team/gnome3
@@ -169,18 +206,18 @@ sudo apt-get --assume-yes --allow-unauthenticated install git eclipse eclipse-cd
 
 echo -e '
 =======================================
-移除ibus輸入法
-======================================='
-sudo apt-get --assume-yes purge ibus ibus-chewing
-
-echo -e '
-=======================================
 安裝姬(H.I.M.E.)輸入法
 ======================================='
 #sudo add-apt-repository --yes ppa:hime-team/hime
 sudo add-apt-repository --yes "deb http://debian.luna.com.tw/`lsb_release --short --codename` ./"
 sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install hime
+
+echo -e '
+=======================================
+移除ibus輸入法
+======================================='
+sudo apt-get --assume-yes purge ibus ibus-chewing
 
 echo -e '
 =======================================
@@ -208,13 +245,7 @@ sudo apt-get --assume-yes --allow-unauthenticated install grub-customizer
 
 echo -e '
 =======================================
-安裝make-kpkg
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install kernel-package fakeroot
-
-echo -e '
-=======================================
-安裝Wine
+安裝Wine Windows平台程式相容層
 ======================================='
 sudo add-apt-repository --yes ppa:ubuntu-wine/ppa
 sudo apt-get update
@@ -222,17 +253,14 @@ sudo apt-get --assume-yes --allow-unauthenticated install wine
 
 echo -e '
 =======================================
-安裝其他常用的軟體
-內含
-　htop
-　powertop
-　ppa-purge
-　localepurge
-　bleachbit
+安裝 Dropbox
 ======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install \
-htop powertop ppa-purge bleachbit localepurge
+sudo add-apt-repository --yes "deb http://linux.dropbox.com/ubuntu `lsb_release --short --codename` main"
+sudo add-apt-repository --remove "deb-src http://linux.dropbox.com/ubuntu `lsb_release --short --codename` main" > /dev/null
+sudo apt-get update
+sudo apt-get --assume-yes --allow-unauthenticated install dropbox
 
+##後安裝階段
 echo -e '
 =======================================
 安裝後系統更新
