@@ -222,6 +222,19 @@ sudo apt-get --assume-yes --allow-unauthenticated install wine
 
 echo -e '
 =======================================
+安裝其他常用的軟體
+內含
+　htop
+　powertop
+　ppa-purge
+　localepurge
+　bleachbit
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install \
+htop powertop ppa-purge bleachbit localepurge
+
+echo -e '
+=======================================
 安裝後系統更新
 ======================================='
 sudo apt-get --assume-yes --allow-unauthenticated upgrade
@@ -240,20 +253,6 @@ echo -e '
 ======================================='
 cd ..
 rm --force --recursive ./Temp_folder_created_by_My_Ubuntu_preconfigure_script_sh
-
-echo -e '
-=======================================
-安裝其他常用的軟體
-內含
-　htop
-　powertop
-　ppa-purge
-　localepurge
-　bleachbit
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install \
-htop powertop ppa-purge bleachbit localepurge
-
 
 ##結束
 echo -e '
