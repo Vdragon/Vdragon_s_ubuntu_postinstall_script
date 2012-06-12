@@ -298,7 +298,7 @@ rm --force --recursive ./Temp_folder_created_by_My_Ubuntu_preconfigure_script_sh
 ##結束
 echo -e '
 =======================================
-批次指令執行完畢。
+批次命令執行完畢。
 如果暫時存放檔案的目錄「Temp_folder_created_by_My_Ubuntu_preconfigure_script_sh」還存在於工作目錄的話請自行刪除。
 ======================================='
 exit 0
