@@ -1,0 +1,44 @@
+Ubuntu安裝後預先設定script
+開發者 | Developer
+  Ｖ字龍(Vdragon)
+已知問題 | Known Issues
+  請至下列網址查看或回報
+  https://github.com/Vdragon/Vdragon_s_ubuntu_postinstall_script/issues
+官方網站 | Official Site
+  https://github.com/Vdragon/Vdragon_s_ubuntu_postinstall_script
+警告 | Warning
+  本命令集合將會修改您系統的軟體倉庫設定以及安裝軟體，可能會造成無法預知的問題，請自行承擔後果！
+已知問題 | Known Issues
+　目前無法選擇哪些項目要安裝、那些不要
+
+安裝的軟體 | Software Installation
+  Aptitude、Synaptic軟體包裹管理程式
+  ubuntu非自由軟體集合
+  Vim文字編輯器
+  htop系統資源監視程式
+  localepurge語系資料自動清除工具
+  K桌面環境(K Desktop Environment)軟體組合
+  make-kpkg Linux 作業系統核心軟體包裹製作工具
+  bleachbit檔案清理工具
+  ppa-purge PPA還原程式
+  powertop 電力消耗監視程式
+  Pidgin即時通訊軟體
+  Virtualbox虛擬機器軟體
+  Unity 桌面環境
+  Boot-Repair 開機載入程式修復工具
+  GNOME 3桌面環境軟體系列
+  Google Chrome網頁瀏覽器
+  burg開機載入程式
+  Git 版本控制系統
+  Eclipse整合式開發環境
+  Eclipse CDT plugin
+  g++ C++ toolchain
+  姬(H.I.M.E.)輸入法
+  安裝VLC影音播放軟體
+  LibreOffice 辦公室應用套裝軟體 3.5.x
+  Grub Customizer Grub開機載入程式設定工具
+  Wine Windows平台程式相容層
+  Dropbox
+
+移除的軟體 | Software Removal
+　ibus輸入法
