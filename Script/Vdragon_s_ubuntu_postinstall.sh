@@ -43,7 +43,6 @@ sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated --fix-broken install
 sudo apt-get --assume-yes --allow-unauthenticated upgrade
 
-
 #echo -e '
 #=======================================
 #安裝Git版本控制系統以使用apt-fast
@@ -57,44 +56,44 @@ sudo apt-get --assume-yes --allow-unauthenticated upgrade
 #=====需要新增軟體來源的軟體=====
 echo -e '
 =======================================
-安裝Aptitude、Synaptic軟體包裹管理程式
+安裝 Aptitude、Synaptic軟體包裹管理程式
 ======================================='
 sudo apt-get --assume-yes --allow-unauthenticated install synaptic aptitude
 
 echo -e '
 =======================================
-安裝ubuntu非自由軟體集合
+安裝 ubuntu非自由軟體集合
 含有大部份的影音編／解碼器、Adobe Flash等常用的非自由軟體
 ======================================='
 sudo apt-get --assume-yes --allow-unauthenticated install ubuntu-restricted-extras
 
 echo -e '
 =======================================
-安裝Vim文字編輯器
+安裝 Vim文字編輯器
 ======================================='
 sudo apt-get --assume-yes --allow-unauthenticated install vim
 
 echo -e '
 =======================================
-安裝htop系統資源監視程式
+安裝 htop系統資源監視程式
 ======================================='
 sudo apt-get --assume-yes --allow-unauthenticated install htop
 
 echo -e '
 =======================================
-安裝localepurge語系資料清除工具
+安裝 localepurge語系資料自動清除工具
 ======================================='
 sudo apt-get --assume-yes --allow-unauthenticated install localepurge
 
 echo -e "
 =======================================
-安裝K桌面環境(K Desktop Environment)軟體系列
+安裝 K桌面環境(K Desktop Environment)軟體組合
 ======================================="
 sudo apt-get --assume-yes --allow-unauthenticated install kde-standard kdesudo kde-l10n-zhtw kdesdk-dolphin-plugins
 
 echo -e '
 =======================================
-安裝 make-kpkg Linux Kernel軟體包裹製作工具
+安裝 make-kpkg Linux 作業系統核心軟體包裹製作工具
 ======================================='
 sudo apt-get --assume-yes --allow-unauthenticated install kernel-package fakeroot
 
@@ -220,6 +219,7 @@ echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes "deb http://debian.luna.com.tw/`lsb_release --short --codename` ./"
 sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install hime
+im-switch -s hime
 
 echo -e '
 =======================================
