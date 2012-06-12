@@ -2,24 +2,22 @@
 ##上一句用來宣告執行script所使用的shell
 
 ##Shell script名稱：Vdragons_Ubuntu_postinstall_script
-##版本：列於下方
-##Shell script範本版本：1.00(0)201110171310
-##此Shellscript所適用的平台：Ubuntu 11.10（理論上就此script編輯當時一段時間前之Ubuntu的發行版皆適用）
+##此Shellscript所適用的平台：Ubuntu 12.04LTS（理論上就此script編輯當時一段時間前之Ubuntu的發行版皆適用）
 ##智慧財產授權：創用CC(BY-NC-SA)目前的最新版本
 ##傳回值：0-正常結束
-##已知問題：
-##	add-apt-repository的操作不乾淨...最好是改為手動設定/etc/apt/sources.list檔案
-##修訂紀錄：
-##
-
-##show title
 echo -e '
 ================================
 Ubuntu安裝後預先設定script
-作者：Ｖ字龍(Vdragon)
-　電子郵件地址：pika1021@gmail.com
+開發者 | Developer
+  Ｖ字龍(Vdragon)
+已知問題 | Known Issues
+  請至下列網址查看或回報
+  https://github.com/Vdragon/Vdragon_s_ubuntu_postinstall_script/issues
+官方網站 | Official Site
+  https://github.com/Vdragon/Vdragon_s_ubuntu_postinstall_script
+警告 | Warning
+  本命令集合將會修改您系統的軟體倉庫設定以及安裝軟體，可能會造成無法預知的問題，請自行承擔後果！
 ================================'
-
 
 ##先取得超級管理員權限
 #read -p "請輸入您的使用者帳號的密碼：" user_password
@@ -45,12 +43,6 @@ sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated --fix-broken install
 sudo apt-get --assume-yes --allow-unauthenticated upgrade
 
-echo -e '
-=======================================
-確認add-apt-repository是某否已安裝
-======================================='
-##http://www.google.com/url?sa=t&source=web&cd=4&ved=0CEUQFjAD&url=http%3A%2F%2Fkirby86a.pixnet.net%2Fblog%2Fpost%2F45530809-%25E5%25B8%25B8%25E8%25A6%258B%25E6%258C%2587%25E4%25BB%25A4add-apt-repository%25E5%25BE%259E%25E5%2593%25AA%25E4%25BE%2586%253F&ei=CxibTpf7OYj-mAXrn4yHAg&usg=AFQjCNHkSvl4vM86dSL55OiwTi0r_zw6sg&sig2=Icg7-HmgQdliEeYLk9T1MA
-sudo apt-get --assume-yes --allow-unauthenticated install python-software-properties
 
 #echo -e '
 #=======================================
@@ -62,6 +54,7 @@ sudo apt-get --assume-yes --allow-unauthenticated install python-software-proper
 #sudo apt-get update
 #sudo apt-get --assume-yes --allow-unauthenticated install git axel
 
+#=====需要新增軟體來源的軟體=====
 echo -e '
 =======================================
 安裝Aptitude、Synaptic軟體包裹管理程式
@@ -126,6 +119,13 @@ sudo apt-get --assume-yes --allow-unauthenticated install powertop
 #=====需要新增軟體來源的軟體=====
 echo -e '
 =======================================
+確認add-apt-repository是某否已安裝
+======================================='
+##http://www.google.com/url?sa=t&source=web&cd=4&ved=0CEUQFjAD&url=http%3A%2F%2Fkirby86a.pixnet.net%2Fblog%2Fpost%2F45530809-%25E5%25B8%25B8%25E8%25A6%258B%25E6%258C%2587%25E4%25BB%25A4add-apt-repository%25E5%25BE%259E%25E5%2593%25AA%25E4%25BE%2586%253F&ei=CxibTpf7OYj-mAXrn4yHAg&usg=AFQjCNHkSvl4vM86dSL55OiwTi0r_zw6sg&sig2=Icg7-HmgQdliEeYLk9T1MA
+sudo apt-get --assume-yes --allow-unauthenticated install python-software-properties
+
+echo -e '
+=======================================
 安裝Pidgin即時通訊軟體
 ======================================='
 echo -e "新增軟體來源中，請稍候…"
@@ -136,7 +136,7 @@ echo -e "
 =======================================
 安裝Virtualbox虛擬機器軟體
 ======================================="
-read -p "請輸入您的使用者帳號名稱：" user_name
+read -p "請輸入您要加入「vboxusers」群組的使用者帳號名稱：" user_name
 echo -e "新增軟體來源中，請稍候…"
 #加入Virtualbox的官方軟體來源
 sudo add-apt-repository --yes "deb http://download.virtualbox.org/virtualbox/debian `lsb_release --short --codename` contrib"
