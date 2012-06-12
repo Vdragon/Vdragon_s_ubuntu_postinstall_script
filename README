@@ -1,4 +1,4 @@
-Ubuntu安裝後預先設定script
+Ｖ字龍的Ubuntu安裝後預先設定script
 開發者 | Developer
   Ｖ字龍(Vdragon)
 採用的授權條款 | Used License
@@ -8,6 +8,9 @@ Ubuntu安裝後預先設定script
   https://github.com/Vdragon/Vdragon_s_ubuntu_postinstall_script/issues
 官方網站 | Official Site
   https://github.com/Vdragon/Vdragon_s_ubuntu_postinstall_script
+適用的系統 | System Supported
+  Tested in ubuntu 12.04LTS
+  Should partially supported in late versions of ubuntu
 警告 | Warning
   本命令集合將會修改您系統的軟體倉庫設定以及安裝軟體，可能會造成無法預知的問題，請自行承擔後果！
 已知問題 | Known Issues
