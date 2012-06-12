@@ -115,6 +115,24 @@ echo -e '
 ======================================='
 sudo apt-get --assume-yes --allow-unauthenticated install powertop
 
+echo -e '
+=======================================
+安裝 Eclipse整合式開發環境
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install eclipse
+
+echo -e '
+=======================================
+安裝 Eclipse CDT Plugin
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install eclipse-cdt
+
+echo -e '
+=======================================
+安裝 G++ C++toolchain
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install g++
+
 #=====需要新增軟體來源的軟體=====
 echo -e '
 =======================================
@@ -198,17 +216,12 @@ sudo apt-get --assume-yes --allow-unauthenticated install burg
 
 echo -e '
 =======================================
-安裝軟體開發工具
-內含：
-  Git 版本控制系統
-　Eclipse整合式開發環境
-　Eclipse CDT plugin
-　g++ C++ toolchain
+安裝Git 版本控制系統
 ======================================='
 echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes ppa:git-core/ppa
 sudo apt-get update
-sudo apt-get --assume-yes --allow-unauthenticated install git eclipse eclipse-cdt g++
+sudo apt-get --assume-yes --allow-unauthenticated install git
 
 echo -e '
 =======================================

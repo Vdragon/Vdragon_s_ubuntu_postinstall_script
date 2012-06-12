@@ -19,6 +19,7 @@
 　切換工作目錄到可寫入的目錄下，以下列命令執行script
     bash 「Vdragon_s_ubuntu_postinstall.sh的路徑」
 安裝的軟體 | Software Installation
+  =====ubuntu官方軟體倉庫的版本=====
   Aptitude、Synaptic軟體包裹管理程式
   ubuntu非自由軟體集合
   Vim文字編輯器
@@ -29,6 +30,11 @@
   bleachbit檔案清理工具
   ppa-purge PPA還原程式
   powertop 電力消耗監視程式
+  Eclipse整合式開發環境
+  Eclipse CDT plugin
+  g++ C++ toolchain
+
+  =====官方PPA的版本=====
   Pidgin即時通訊軟體
   Virtualbox虛擬機器軟體
   Unity 桌面環境
@@ -37,9 +43,6 @@
   Google Chrome網頁瀏覽器
   burg開機載入程式
   Git 版本控制系統
-  Eclipse整合式開發環境
-  Eclipse CDT plugin
-  g++ C++ toolchain
   姬(H.I.M.E.)輸入法
   安裝VLC影音播放軟體
   LibreOffice 辦公室應用套裝軟體 3.5.x
