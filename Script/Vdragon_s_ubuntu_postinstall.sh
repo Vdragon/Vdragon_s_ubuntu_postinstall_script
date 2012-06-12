@@ -28,6 +28,7 @@ echo -e '
 ========================================
 建立暫時存放檔案的目錄"Temp_folder_created_by_My_Ubuntu_preconfigure_script_sh"，如果執行完沒有成功刪除請自行刪除。
 ======================================='
+rm --recursive --force Temp_folder_created_by_My_Ubuntu_preconfigure_script_sh 2>/dev/null
 mkdir ./Temp_folder_created_by_My_Ubuntu_preconfigure_script_sh
 cd ./Temp_folder_created_by_My_Ubuntu_preconfigure_script_sh
 
