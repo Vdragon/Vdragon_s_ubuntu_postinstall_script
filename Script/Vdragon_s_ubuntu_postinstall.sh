@@ -226,7 +226,7 @@ sudo apt-get --assume-yes --allow-unauthenticated install git
 
 echo -e '
 =======================================
-安裝姬(H.I.M.E.)輸入法
+安裝姬(H.I.M.E.)中文輸入法
 ======================================='
 echo -e "新增軟體來源中，請稍候…"
 #sudo add-apt-repository --yes ppa:hime-team/hime
