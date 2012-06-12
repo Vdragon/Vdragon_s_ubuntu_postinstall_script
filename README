@@ -12,7 +12,9 @@ Ubuntu安裝後預先設定script
   本命令集合將會修改您系統的軟體倉庫設定以及安裝軟體，可能會造成無法預知的問題，請自行承擔後果！
 已知問題 | Known Issues
 　目前無法選擇哪些項目要安裝、那些不要
-
+使用方式 | Usage
+　切換工作目錄到可寫入的目錄下，以下列命令執行script
+    bash 「Vdragon_s_ubuntu_postinstall.sh的路徑」
 安裝的軟體 | Software Installation
   Aptitude、Synaptic軟體包裹管理程式
   ubuntu非自由軟體集合
