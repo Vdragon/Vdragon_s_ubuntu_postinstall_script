@@ -57,86 +57,6 @@ sudo apt-get --assume-yes --allow-unauthenticated upgrade
 #=====需要新增軟體來源的軟體=====
 echo -e '
 =======================================
-安裝 Aptitude、Synaptic軟體包裹管理程式
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install synaptic aptitude
-
-echo -e '
-=======================================
-安裝 ubuntu非自由軟體集合
-含有大部份的影音編／解碼器、Adobe Flash等常用的非自由軟體
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install ubuntu-restricted-extras
-
-echo -e '
-=======================================
-安裝 Vim文字編輯器
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install vim
-
-echo -e '
-=======================================
-安裝 htop系統資源監視程式
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install htop
-
-echo -e '
-=======================================
-安裝 localepurge語系資料自動清除工具
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install localepurge
-
-echo -e "
-=======================================
-安裝 K桌面環境(K Desktop Environment)軟體組合
-======================================="
-sudo apt-get --assume-yes --allow-unauthenticated install kde-standard kdesudo kde-l10n-zhtw kdesdk-dolphin-plugins
-
-echo -e '
-=======================================
-安裝 make-kpkg Linux 作業系統核心軟體包裹製作工具
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install kernel-package fakeroot
-
-echo -e '
-=======================================
-安裝 bleachbit 檔案清理工具
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install bleachbit
-
-echo -e '
-=======================================
-安裝 ppa-purge PPA還原程式
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install ppa-purge
-
-echo -e '
-=======================================
-安裝 powertop 電力消耗監視程式
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install powertop
-
-echo -e '
-=======================================
-安裝 Eclipse整合式開發環境
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install eclipse
-
-echo -e '
-=======================================
-安裝 Eclipse CDT Plugin
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install eclipse-cdt
-
-echo -e '
-=======================================
-安裝 G++ C++toolchain
-======================================='
-sudo apt-get --assume-yes --allow-unauthenticated install g++
-
-#=====需要新增軟體來源的軟體=====
-echo -e '
-=======================================
 確認add-apt-repository是某否已安裝
 ======================================='
 ##http://www.google.com/url?sa=t&source=web&cd=4&ved=0CEUQFjAD&url=http%3A%2F%2Fkirby86a.pixnet.net%2Fblog%2Fpost%2F45530809-%25E5%25B8%25B8%25E8%25A6%258B%25E6%258C%2587%25E4%25BB%25A4add-apt-repository%25E5%25BE%259E%25E5%2593%25AA%25E4%25BE%2586%253F&ei=CxibTpf7OYj-mAXrn4yHAg&usg=AFQjCNHkSvl4vM86dSL55OiwTi0r_zw6sg&sig2=Icg7-HmgQdliEeYLk9T1MA
@@ -154,7 +74,7 @@ echo -e "
 =======================================
 安裝Virtualbox虛擬機器軟體
 ======================================="
-read -p "請輸入您要加入「vboxusers」群組的使用者帳號名稱：" user_name
+read -p "請輸入您要加入「vboxusers」群組允許其使用VirtualBox USB裝置轉接功能的使用者帳號名稱：" vbox_user_name
 echo -e "新增軟體來源中，請稍候…"
 #加入Virtualbox的官方軟體來源
 sudo add-apt-repository --yes "deb http://download.virtualbox.org/virtualbox/debian `lsb_release --short --codename` contrib"
@@ -166,7 +86,7 @@ sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install dkms
 sudo apt-get --assume-yes --allow-unauthenticated install virtualbox-4.1
 #add $user_name to vboxusers group
-sudo usermod --append --groups vboxusers $user_name
+sudo usermod --append --groups vboxusers $vbox_user_name
 
 echo -e "
 =======================================
@@ -277,14 +197,102 @@ sudo add-apt-repository --yes ppa:ubuntu-wine/ppa
 sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install wine
 
+#=====不需要新增軟體來源的軟體=====
+echo -e '
+=======================================
+安裝 Aptitude、Synaptic軟體包裹管理程式
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install synaptic aptitude
+
+echo -e '
+=======================================
+安裝 ubuntu非自由軟體集合
+含有大部份的影音編／解碼器、Adobe Flash等常用的非自由軟體
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install ubuntu-restricted-extras
+
+echo -e '
+=======================================
+安裝 Vim文字編輯器
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install vim
+
+echo -e '
+=======================================
+安裝 htop系統資源監視程式
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install htop
+
+echo -e '
+=======================================
+安裝 localepurge語系資料自動清除工具
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install localepurge
+
+echo -e "
+=======================================
+安裝 K桌面環境(K Desktop Environment)軟體組合
+======================================="
+sudo apt-get --assume-yes --allow-unauthenticated install kde-standard kdesudo kde-l10n-zhtw kdesdk-dolphin-plugins
+
+echo -e '
+=======================================
+安裝 make-kpkg Linux 作業系統核心軟體包裹製作工具
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install kernel-package fakeroot
+
+echo -e '
+=======================================
+安裝 bleachbit 檔案清理工具
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install bleachbit
+
+echo -e '
+=======================================
+安裝 ppa-purge PPA還原程式
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install ppa-purge
+
+echo -e '
+=======================================
+安裝 powertop 電力消耗監視程式
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install powertop
+
+echo -e '
+=======================================
+安裝 Eclipse整合式開發環境
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install eclipse
+
+echo -e '
+=======================================
+安裝 Eclipse CDT Plugin
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install eclipse-cdt
+
+echo -e '
+=======================================
+安裝 G++ C++toolchain
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install g++
+
+echo -e '
+=======================================
+安裝 p7zip壓縮／封裝檔解壓縮程式以及RAR格式壓縮檔解壓縮支援
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install p7zip-full p7zip-rar
+
+echo -e '
+=======================================
+安裝 K3b光碟燒錄程式
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install k3b
+
 echo -e '
 =======================================
 安裝 Dropbox
 ======================================='
-echo -e "新增軟體來源中，請稍候…"
-sudo add-apt-repository --yes "deb http://linux.dropbox.com/ubuntu `lsb_release --short --codename` main"
-sudo add-apt-repository --remove "deb-src http://linux.dropbox.com/ubuntu `lsb_release --short --codename` main" > /dev/null
-sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install dropbox
 
 ##後安裝階段
