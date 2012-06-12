@@ -16,7 +16,7 @@
 已知問題 | Known Issues
 　目前無法選擇哪些項目要安裝、那些不要
 使用方式 | Usage
-　切換工作目錄到可寫入的目錄下，以下列命令執行script
+　於終端機（或終端機模擬程式）下切換工作目錄到可寫入的目錄下，以下列命令執行script
     bash 「Vdragon_s_ubuntu_postinstall.sh的路徑」
 安裝的軟體 | Software Installation
   =====ubuntu官方軟體倉庫的版本=====
@@ -34,7 +34,7 @@
   Eclipse CDT plugin
   g++ C++ toolchain
 
-  =====官方PPA的版本=====
+  =====官方軟體來源的版本=====
   Pidgin即時通訊軟體
   Virtualbox虛擬機器軟體
   Unity 桌面環境
@@ -43,7 +43,7 @@
   Google Chrome網頁瀏覽器
   burg開機載入程式
   Git 版本控制系統
-  姬(H.I.M.E.)輸入法
+  姬(H.I.M.E.)輸入法（採用非官方(?)Tetralet的軟體來源）
   安裝VLC影音播放軟體
   LibreOffice 辦公室應用套裝軟體 3.5.x
   Grub Customizer Grub開機載入程式設定工具
