@@ -57,7 +57,7 @@ sudo apt-get --assume-yes --allow-unauthenticated upgrade
 #=====需要新增軟體來源的軟體=====
 echo -e '
 =======================================
-確認add-apt-repository是某否已安裝
+確認add-apt-repository是否已安裝
 ======================================='
 ##http://www.google.com/url?sa=t&source=web&cd=4&ved=0CEUQFjAD&url=http%3A%2F%2Fkirby86a.pixnet.net%2Fblog%2Fpost%2F45530809-%25E5%25B8%25B8%25E8%25A6%258B%25E6%258C%2587%25E4%25BB%25A4add-apt-repository%25E5%25BE%259E%25E5%2593%25AA%25E4%25BE%2586%253F&ei=CxibTpf7OYj-mAXrn4yHAg&usg=AFQjCNHkSvl4vM86dSL55OiwTi0r_zw6sg&sig2=Icg7-HmgQdliEeYLk9T1MA
 sudo apt-get --assume-yes --allow-unauthenticated install python-software-properties
@@ -68,6 +68,7 @@ echo -e '
 ======================================='
 echo -e "新增軟體來源中，請稍候…"
 sudo add-apt-repository --yes ppa:pidgin-developers/ppa
+sudo apt-get update
 sudo apt-get --assume-yes --allow-unauthenticated install pidgin
 
 echo -e "
