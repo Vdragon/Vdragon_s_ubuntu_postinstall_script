@@ -279,6 +279,12 @@ sudo apt-get --assume-yes --allow-unauthenticated install g++
 
 echo -e '
 =======================================
+安裝 valgrind 程式除錯工具
+======================================='
+sudo apt-get --assume-yes --allow-unauthenticated install valgrind
+
+echo -e '
+=======================================
 安裝 p7zip壓縮／封裝檔解壓縮程式以及RAR格式壓縮檔解壓縮支援
 ======================================='
 sudo apt-get --assume-yes --allow-unauthenticated install p7zip-full p7zip-rar
