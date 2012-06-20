@@ -178,6 +178,9 @@ echo -e ${message_update_cache}
 sudo ${prompt_password} apt-get update >> update_cache.log
 sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install hime
 im-switch -s hime
+#ubuntu12.04LTS疑似需要加入白名單，待檢視
+gsettings set com.canonical.Unity.Panel systray-whitelist "['hime']"
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 
 echo -e '
 =======================================
