@@ -326,7 +326,7 @@ sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install k3b
 
 echo -e '
 =======================================
-安裝 Dropbox
+安裝 Dropbox檔案同步軟體
 ======================================='
 sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install dropbox
 
