@@ -59,6 +59,15 @@ sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated upgrade
 #sudo ${prompt_password} apt-get update
 #sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install git axel
 
+#先安裝localepurge，這樣才會受惠之後的安裝
+echo -e '
+=======================================
+安裝 localepurge語系資料自動清除工具
+當進行 debconf 設定時建議選擇 en*語系以及您認識的語言的相關語系（例如zh*）
+任何沒有選擇的語系的語系資料將被 localepurge 自動移除
+======================================='
+sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install localepurge
+
 #=====需要新增軟體來源的軟體=====
 echo -e '
 =======================================
@@ -251,12 +260,6 @@ echo -e '
 安裝 htop系統資源監視程式
 ======================================='
 sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install htop
-
-echo -e '
-=======================================
-安裝 localepurge語系資料自動清除工具
-======================================='
-sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install localepurge
 
 echo -e "
 =======================================
