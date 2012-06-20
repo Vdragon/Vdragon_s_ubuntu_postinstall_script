@@ -337,12 +337,6 @@ echo -e '
 ======================================='
 sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated upgrade
 
-echo -e "
-=======================================
-移除不再需要的套件
-======================================="
-sudo ${prompt_password} apt-get --assume-yes autoremove
-
 #刪除script暫時存放檔案的目錄
 echo -e '
 =======================================
