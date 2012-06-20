@@ -227,13 +227,26 @@ sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install win
 
 echo -e '
 =======================================
-JDownloader 檔案下載軟體
+安裝JDownloader 檔案下載軟體
 ======================================='
 echo -e ${message_add_source}
 sudo ${prompt_password} add-apt-repository --yes ppa:jd-team/jdownloader
 echo -e ${message_update_cache}
 sudo ${prompt_password} apt-get update >> update_cache.log
 sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install jdownloader
+
+echo -e '
+=======================================
+安裝multisystem 可開機USB隨身碟製作工具
+======================================='
+echo -e ${message_add_source}
+sudo apt-add-repository --yes 'deb http://liveusb.info/multisystem/depot all main'
+wget -q http://liveusb.info/multisystem/depot/multisystem.asc -O- | sudo apt-key add -
+sudo ${prompt_password} apt-get update >> update_cache.log
+sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install multisystem
+#SUDO_USER 是空的沒有用
+#sudo usermod --groups adm --append ${SUDO_USER}
+
 
 #=====不需要新增軟體來源的軟體=====
 echo -e '
