@@ -247,6 +247,13 @@ sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install mul
 #SUDO_USER 是空的沒有用
 #sudo usermod --groups adm --append ${SUDO_USER}
 
+echo -e '
+=======================================
+安裝 Dropbox檔案同步軟體
+======================================='
+sudo ${prompt_password} add-apt-repository --yes "deb http://linux.dropbox.com/ubuntu `lsb_release --short --codename` main"
+sudo ${prompt_password} add-apt-repository --remove "deb-src http://linux.dropbox.com/ubuntu `lsb_release --short --codename` main" > /dev/null
+sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install dropbox
 
 #=====不需要新增軟體來源的軟體=====
 echo -e '
@@ -339,12 +346,6 @@ echo -e '
 安裝 K3b光碟燒錄程式
 ======================================='
 sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install k3b
-
-echo -e '
-=======================================
-安裝 Dropbox檔案同步軟體
-======================================='
-sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install dropbox
 
 ##後安裝階段
 echo -e '
