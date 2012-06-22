@@ -179,7 +179,7 @@ sudo ${prompt_password} apt-get update >> update_cache.log
 sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install hime
 im-switch -s hime
 #ubuntu12.04LTS疑似需要加入白名單，待檢視
-gsettings set com.canonical.Unity.Panel systray-whitelist "['hime']"
+sudo gsettings set com.canonical.Unity.Panel systray-whitelist "['hime']"
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 
 echo -e '
@@ -238,6 +238,14 @@ echo -e ${message_update_cache}
 sudo ${prompt_password} apt-get update >> update_cache.log
 sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install jdownloader
 
+echo -e "
+=======================================
+安裝 K桌面環境(K Desktop Environment)軟體組合
+======================================="
+echo -e ${message_add_source}
+sudo ${prompt_password} add-apt-repository --yes ppa:kubuntu-ppa/ppa
+sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install kde-standard kdesudo kde-l10n-zhtw kdesdk-dolphin-plugins gtk2-engines-oxygen gtk3-engines-oxygen
+
 echo -e '
 =======================================
 安裝multisystem 可開機USB隨身碟製作工具
@@ -283,12 +291,6 @@ echo -e '
 安裝 htop系統資源監視程式
 ======================================='
 sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install htop
-
-echo -e "
-=======================================
-安裝 K桌面環境(K Desktop Environment)軟體組合
-======================================="
-sudo ${prompt_password} apt-get --assume-yes --allow-unauthenticated install kde-standard kdesudo kde-l10n-zhtw kdesdk-dolphin-plugins gtk2-engines-oxygen gtk3-engines-oxygen
 
 echo -e '
 =======================================
