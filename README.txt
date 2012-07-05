@@ -34,10 +34,10 @@
   Eclipse整合式開發環境
   Eclipse CDT plugin
   g++ C++ toolchain
-	valgrind 程式除錯工具
-	p7zip壓縮／封裝檔解壓縮程式以及RAR格式壓縮檔解壓縮支援
-	K3b光碟燒錄程式
-	deborphan孤立軟體包裹移除工具
+  valgrind 程式除錯工具
+  p7zip壓縮／封裝檔解壓縮程式以及RAR格式壓縮檔解壓縮支援
+  K3b光碟燒錄程式
+  deborphan孤立軟體包裹移除工具
 
   =====官方軟體來源的版本=====
   Pidgin即時通訊軟體
