@@ -78,7 +78,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e '
 =======================================
-安裝Pidgin即時通訊軟體
+安裝 Pidgin即時通訊軟體
 ======================================='
 echo -e ${message_add_source}
 sudo ${message_prompt_password} add-apt-repository --yes ppa:pidgin-developers/ppa
@@ -88,7 +88,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e "
 =======================================
-安裝Virtualbox虛擬機器軟體
+安裝 Virtualbox虛擬機器軟體
 ======================================="
 read -p "請輸入您要加入「vboxusers」群組允許其使用VirtualBox USB裝置轉接功能的使用者帳號名稱：" vbox_user_name
 echo -e ${message_add_source}
@@ -107,7 +107,7 @@ sudo ${message_prompt_password} usermod --append --groups vboxusers $vbox_user_n
 
 echo -e "
 =======================================
-安裝 Unity 桌面環境
+安裝 Unity桌面環境
 ======================================="
 echo -e ${message_add_source}
 sudo ${message_prompt_password} add-apt-repository --yes ppa:unity-team/ppa
@@ -117,7 +117,7 @@ sudo ${message_prompt_password} apprompt_passwordt-get --assume-yes --allow-unau
 
 echo -e "
 =======================================
-安裝 Boot-Repair 開機載入程式修復工具
+安裝 Boot-Repair開機載入程式修復工具
 ======================================="
 echo -e ${message_add_source}
 sudo ${message_prompt_password} add-apt-repository --yes ppa:yannubuntu/boot-repair
@@ -127,7 +127,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e "
 =======================================
-安裝GNOME 3桌面環境軟體系列
+安裝 GNOME 3桌面環境軟體系列
 ======================================="
 echo -e ${message_add_source}
 sudo ${message_prompt_password} add-apt-repository --yes ppa:gnome3-team/gnome3
@@ -137,7 +137,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e "
 =======================================
-安裝Google Chrome網頁瀏覽器
+安裝 Google Chrome網頁瀏覽器
 ======================================="
 echo -e ${message_add_source}
 #加入Google Chrome的官方軟體來源
@@ -159,7 +159,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e '
 =======================================
-安裝Git版本控制系統
+安裝 Git版本控制系統
 ======================================='
 echo -e ${message_add_source}
 sudo ${message_prompt_password} add-apt-repository --yes ppa:git-core/ppa
@@ -169,7 +169,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e '
 =======================================
-安裝姬(H.I.M.E.)中文輸入法
+安裝 姬(H.I.M.E.)中文輸入法
 ======================================='
 echo -e ${message_add_source}
 #sudo ${message_prompt_password} add-apt-repository --yes ppa:hime-team/hime
@@ -184,13 +184,13 @@ sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 
 echo -e '
 =======================================
-移除ibus輸入法
+移除 ibus輸入法
 ======================================='
 sudo ${message_prompt_password} apt-get --assume-yes purge ibus ibus-chewing
 
 echo -e '
 =======================================
-安裝VLC影音播放軟體
+安裝 VLC影音播放軟體
 ======================================='
 echo -e ${message_add_source}
 sudo ${message_prompt_password} add-apt-repository --yes ppa:videolan/stable-daily
@@ -200,7 +200,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e '
 =======================================
-安裝LibreOffice 辦公室應用套裝軟體 3.5.x
+安裝 LibreOffice 辦公室應用套裝軟體 3.5.x
 ======================================='
 echo -e ${message_add_source}
 sudo ${message_prompt_password} add-apt-repository --yes ppa:libreoffice/libreoffice-3-5
@@ -210,7 +210,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e '
 =======================================
-安裝Grub Customizer Grub開機載入程式設定工具
+安裝 Grub Customizer Grub開機載入程式設定工具
 ======================================='
 echo -e ${message_add_source}
 sudo ${message_prompt_password} add-apt-repository --yes ppa:danielrichter2007/grub-customizer
@@ -220,7 +220,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e '
 =======================================
-安裝Wine Windows平台程式相容層
+安裝 Wine Windows平台程式相容層
 ======================================='
 echo -e ${message_add_source}
 sudo ${message_prompt_password} add-apt-repository --yes ppa:ubuntu-wine/ppa
@@ -230,7 +230,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e '
 =======================================
-安裝JDownloader 檔案下載軟體
+安裝 JDownloader檔案下載軟體
 ======================================='
 echo -e ${message_add_source}
 sudo ${message_prompt_password} add-apt-repository --yes ppa:jd-team/jdownloader
@@ -248,7 +248,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e '
 =======================================
-安裝multisystem 可開機USB隨身碟製作工具
+安裝 multisystem可開機USB隨身碟製作工具
 ======================================='
 echo -e ${message_add_source}
 sudo apt-add-repository --yes 'deb http://liveusb.info/multisystem/depot all main'
@@ -294,13 +294,13 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e '
 =======================================
-安裝 make-kpkg Linux 作業系統核心軟體包裹製作工具
+安裝 make-kpkg Linux作業系統核心軟體包裹製作工具
 ======================================='
 sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated install kernel-package fakeroot
 
 echo -e '
 =======================================
-安裝 bleachbit 檔案清理工具
+安裝 bleachbit檔案清理工具
 ======================================='
 sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated install bleachbit
 
@@ -312,7 +312,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e '
 =======================================
-安裝 powertop 電力消耗監視程式
+安裝 powertop電力消耗監視程式
 ======================================='
 sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated install powertop
 
@@ -336,7 +336,7 @@ sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated ins
 
 echo -e '
 =======================================
-安裝 valgrind 程式除錯工具
+安裝 valgrind程式除錯工具
 ======================================='
 sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated install valgrind
 
