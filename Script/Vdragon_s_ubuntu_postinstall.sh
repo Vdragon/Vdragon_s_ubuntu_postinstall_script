@@ -352,6 +352,12 @@ echo -e '
 ======================================='
 sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated install k3b
 
+echo -e '
+=======================================
+安裝 deborphan孤立軟體包裹移除工具
+======================================='
+sudo ${message_prompt_password} apt-get --assume-yes --allow-unauthenticated install deborphan
+
 ##後安裝階段
 echo -e '
 =======================================
