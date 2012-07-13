@@ -1,4 +1,4 @@
-Ｖ字龍的Ubuntu安裝後預先設定script
+Ｖ字龍的Ubuntu安裝後預先設定script程式
 開發者 | Developer
   Ｖ字龍(Vdragon)
 採用的授權條款 | Used License
@@ -12,7 +12,7 @@
   Tested in ubuntu 12.04LTS
   Should partially supported in late versions of ubuntu
 警告 | Warning
-  本命令集合將會修改您系統的軟體倉庫設定以及安裝軟體，可能會造成無法預知的問題，請自行承擔後果！
+  本script程式將會修改您系統的軟體倉庫設定以及安裝軟體，可能會造成無法預知的問題，請自行承擔後果！
 已知問題 | Known Issues
 　* 目前無法選擇哪些項目要安裝、那些不要
 　* Ubuntu 10.04LTS 的add-apt-repository程式無--yes選項，將其移除即可。
