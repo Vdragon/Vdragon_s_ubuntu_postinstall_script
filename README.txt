@@ -17,18 +17,18 @@
 　* 目前無法選擇哪些項目要安裝、那些不要
 　* Ubuntu 10.04LTS 的add-apt-repository程式無--yes選項，將其移除即可。
 使用方式 | Usage
-	圖形介面shell下的操作方式
-		點擊專案網頁中的「ZIP」按鈕下載原始程式碼的ZIP壓縮封裝檔
-		解壓縮下載下來的ZIP壓縮封裝檔於您具有寫入權限的目錄下
-		開啟任一終端機模擬程式（如GNOME終端機(gnome-terminal)或Konsole終端機模擬程式(konsole)並切換當前工作目錄(current working directory)至原始程式碼的根目錄下（其中有Script目錄與README.txt等檔案）
-		執行「bash Script/Vdragon_s_ubuntu_postinstall.sh」依照提示的訊息輸入對應的資料
-	文字介面shell下的操作方式
-		切換目錄至您具有寫入權限的目錄下
-		確定您是否有安裝 Git版本控制系統 相關程式
-			於ubuntu中可使用「sudo apt-get install git」命令安裝
-		執行「git clone --branch stable https://github.com/Vdragon/Vdragon_s_ubuntu_postinstall_script.git」
-		執行「cd Vdragon_s_ubuntu_postinstall_script/」
-		執行「「bash Script/Vdragon_s_ubuntu_postinstall.sh」依照提示的訊息輸入對應的資料
+  圖形介面shell下的操作方式
+    點擊專案網頁中的「ZIP」按鈕下載原始程式碼的ZIP壓縮封裝檔
+    解壓縮下載下來的ZIP壓縮封裝檔於您具有寫入權限的目錄下
+    開啟任一終端機模擬程式（如GNOME終端機(gnome-terminal)或Konsole終端機模擬程式(konsole)並切換當前工作目錄(current working directory)至原始程式碼的根目錄下（其中有Script目錄與README.txt等檔案）
+    執行「bash Script/Vdragon_s_ubuntu_postinstall.sh」依照提示的訊息輸入對應的資料
+  文字介面shell下的操作方式
+    切換目錄至您具有寫入權限的目錄下
+    確定您是否有安裝 Git版本控制系統 相關程式
+      於ubuntu中可使用「sudo apt-get install git」命令安裝
+    執行「git clone --branch stable https://github.com/Vdragon/Vdragon_s_ubuntu_postinstall_script.git」
+    執行「cd Vdragon_s_ubuntu_postinstall_script/」
+    執行「「bash Script/Vdragon_s_ubuntu_postinstall.sh」依照提示的訊息輸入對應的資料
 於終端機（或終端機模擬程式）下切換工作目錄到可寫入的目錄下，以下列命令執行script
     bash 「Vdragon_s_ubuntu_postinstall.sh的路徑」
 軟體依賴性 | Software Dependency
