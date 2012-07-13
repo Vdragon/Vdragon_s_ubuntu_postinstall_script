@@ -28,7 +28,7 @@
       於ubuntu中可使用「sudo apt-get install git」命令安裝
     執行「git clone --branch stable https://github.com/Vdragon/Vdragon_s_ubuntu_postinstall_script.git 」
     執行「cd Vdragon_s_ubuntu_postinstall_script/」
-    執行「「bash Script/Vdragon_s_ubuntu_postinstall.sh」依照提示的訊息輸入對應的資料
+    執行「bash Script/Vdragon_s_ubuntu_postinstall.sh」依照提示的訊息輸入對應的資料
 於終端機（或終端機模擬程式）下切換工作目錄到可寫入的目錄下，以下列命令執行script
     bash 「Vdragon_s_ubuntu_postinstall.sh的路徑」
 軟體依賴性 | Software Dependency
