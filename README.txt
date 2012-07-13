@@ -19,6 +19,9 @@
 使用方式 | Usage
 　於終端機（或終端機模擬程式）下切換工作目錄到可寫入的目錄下，以下列命令執行script
     bash 「Vdragon_s_ubuntu_postinstall.sh的路徑」
+軟體依賴性 | Software Dependency
+  Advanced Packaging Tool(APT)軟體包裹管理系統工具
+  （script程式會嘗試自行安裝）python-software-properties軟體包裹
 安裝的軟體 | Software Installation
   =====ubuntu官方軟體倉庫的版本=====
   Aptitude、Synaptic軟體包裹管理程式
