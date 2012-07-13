@@ -26,7 +26,7 @@
     切換目錄至您具有寫入權限的目錄下
     確定您是否有安裝 Git版本控制系統 相關程式
       於ubuntu中可使用「sudo apt-get install git」命令安裝
-    執行「git clone --branch stable https://github.com/Vdragon/Vdragon_s_ubuntu_postinstall_script.git」
+    執行「git clone --branch stable https://github.com/Vdragon/Vdragon_s_ubuntu_postinstall_script.git 」
     執行「cd Vdragon_s_ubuntu_postinstall_script/」
     執行「「bash Script/Vdragon_s_ubuntu_postinstall.sh」依照提示的訊息輸入對應的資料
 於終端機（或終端機模擬程式）下切換工作目錄到可寫入的目錄下，以下列命令執行script
