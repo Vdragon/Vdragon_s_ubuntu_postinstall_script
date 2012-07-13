@@ -1,5 +1,5 @@
 #!/bin/bash
-##上一句用來宣告執行script所使用的shell
+##上一句用來宣告執行script所使用的shell程式
 
 ##Shell script名稱：Vdragons_Ubuntu_postinstall_script
 ##此Shellscript所適用的平台：Ubuntu 12.04LTS（部份適用於其他基於Debian的Linux發行版本）
