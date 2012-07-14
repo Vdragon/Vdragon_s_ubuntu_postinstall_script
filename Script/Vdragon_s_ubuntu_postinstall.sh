@@ -124,7 +124,7 @@ echo -e ${message_add_source}
 sudo ${option_sudo_prompt_password} add-apt-repository --yes ppa:unity-team/ppa
 echo -e ${message_update_cache}
 sudo ${option_sudo_prompt_password} ${command_apt_get_update_package_cache} >> update_cache.log
-sudo ${option_sudo_prompt_password} ${command_apt_get_install_package} install unity
+sudo ${option_sudo_prompt_password} ${command_apt_get_install_package} unity
 
 echo -e "
 =======================================
