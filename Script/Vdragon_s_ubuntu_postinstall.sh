@@ -156,6 +156,8 @@ echo -e ${message_add_source}
 #加入Google Chrome的官方軟體來源
 sudo ${option_sudo_prompt_password} add-apt-repository --yes "deb http://dl.google.com/linux/chrome/deb/ stable main"
 sudo ${option_sudo_prompt_password} add-apt-repository --remove "deb-src http://dl.google.com/linux/chrome/deb/ stable main" > /dev/null
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | \
+sudo ${option_sudo_prompt_password} apt-key add -
 echo -e ${message_update_cache}
 sudo ${option_sudo_prompt_password} ${command_apt_get_update_package_cache} >> update_cache.log
 sudo ${option_sudo_prompt_password} ${command_apt_get_install_package} google-chrome-stable
@@ -267,8 +269,9 @@ echo -e '
 安裝 multisystem可開機USB隨身碟製作工具
 ======================================='
 echo -e ${message_add_source}
-sudo apt-add-repository --yes 'deb http://liveusb.info/multisystem/depot all main'
-wget -q http://liveusb.info/multisystem/depot/multisystem.asc -O- | sudo apt-key add -
+sudo ${option_sudo_prompt_password} apt-add-repository --yes 'deb http://liveusb.info/multisystem/depot all main'
+wget --output-document=- http://liveusb.info/multisystem/depot/multisystem.asc | \
+sudo ${option_sudo_prompt_password} apt-key add -
 sudo ${option_sudo_prompt_password} ${command_apt_get_update_package_cache} >> update_cache.log
 sudo ${option_sudo_prompt_password} ${command_apt_get_install_package} multisystem
 #SUDO_USER 是空的沒有用
