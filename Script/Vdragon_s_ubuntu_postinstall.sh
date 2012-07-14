@@ -87,8 +87,6 @@ echo -e '
 sudo ${option_sudo_prompt_password} ${command_apt_get_install_package} python-software-properties
 
 #=====需要新增軟體來源的軟體=====
-
-
 echo -e '
 =======================================
 安裝 Pidgin即時通訊軟體
@@ -161,6 +159,8 @@ sudo ${option_sudo_prompt_password} apt-key add -
 echo -e ${message_update_cache}
 sudo ${option_sudo_prompt_password} ${command_apt_get_update_package_cache} >> update_cache.log
 sudo ${option_sudo_prompt_password} ${command_apt_get_install_package} google-chrome-stable
+#因為軟體包裹會安裝自己的軟體來源，所以把我們之前建好的移除掉
+sudo ${option_sudo_prompt_password} add-apt-repository --remove "deb http://dl.google.com/linux/chrome/deb/ stable main" > /dev/null
 
 echo -e '
 =======================================
@@ -281,9 +281,13 @@ echo -e '
 =======================================
 安裝 Dropbox檔案同步軟體
 ======================================='
-sudo ${option_sudo_prompt_password} add-apt-repository --yes "deb http://linux.dropbox.com/ubuntu `lsb_release --short --codename` main"
-sudo ${option_sudo_prompt_password} add-apt-repository --remove "deb-src http://linux.dropbox.com/ubuntu `lsb_release --short --codename` main" > /dev/null
+echo -e ${message_add_source}
+sudo ${option_sudo_prompt_password} add-apt-repository --yes "deb http://linux.dropbox.com/ubuntu $(lsb_release --short --codename) main"
+sudo ${option_sudo_prompt_password} add-apt-repository --remove "deb-src http://linux.dropbox.com/ubuntu $(lsb_release --short --codename) main" > /dev/null
+sudo ${option_sudo_prompt_password} apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
 sudo ${option_sudo_prompt_password} ${command_apt_get_install_package} dropbox
+#因為軟體包裹會安裝自己的軟體來源，所以把我們之前建好的移除掉
+sudo ${option_sudo_prompt_password} add-apt-repository --remove "deb http://linux.dropbox.com/ubuntu $(lsb_release --short --codename) main" > /dev/null
 
 #=====不需要新增軟體來源的軟體=====
 echo -e '
