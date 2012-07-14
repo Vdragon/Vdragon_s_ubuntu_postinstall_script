@@ -159,8 +159,6 @@ sudo ${option_sudo_prompt_password} apt-key add -
 echo -e ${message_update_cache}
 sudo ${option_sudo_prompt_password} ${command_apt_get_update_package_cache} >> update_cache.log
 sudo ${option_sudo_prompt_password} ${command_apt_get_install_package} google-chrome-stable
-#因為軟體包裹會安裝自己的軟體來源，所以把我們之前建好的移除掉
-sudo ${option_sudo_prompt_password} add-apt-repository --remove "deb http://dl.google.com/linux/chrome/deb/ stable main" > /dev/null
 
 echo -e '
 =======================================
@@ -262,6 +260,8 @@ echo -e "
 ======================================="
 echo -e ${message_add_source}
 sudo ${option_sudo_prompt_password} add-apt-repository --yes ppa:kubuntu-ppa/ppa
+echo -e ${message_update_cache}
+sudo ${option_sudo_prompt_password} ${command_apt_get_update_package_cache} >> update_cache.log
 sudo ${option_sudo_prompt_password} ${command_apt_get_install_package} kde-standard kdesudo kde-l10n-zhtw kdesdk-dolphin-plugins gtk2-engines-oxygen gtk3-engines-oxygen
 
 echo -e '
@@ -272,6 +272,7 @@ echo -e ${message_add_source}
 sudo ${option_sudo_prompt_password} apt-add-repository --yes 'deb http://liveusb.info/multisystem/depot all main'
 wget --output-document=- http://liveusb.info/multisystem/depot/multisystem.asc | \
 sudo ${option_sudo_prompt_password} apt-key add -
+echo -e ${message_update_cache}
 sudo ${option_sudo_prompt_password} ${command_apt_get_update_package_cache} >> update_cache.log
 sudo ${option_sudo_prompt_password} ${command_apt_get_install_package} multisystem
 #SUDO_USER 是空的沒有用
@@ -285,9 +286,9 @@ echo -e ${message_add_source}
 sudo ${option_sudo_prompt_password} add-apt-repository --yes "deb http://linux.dropbox.com/ubuntu $(lsb_release --short --codename) main"
 sudo ${option_sudo_prompt_password} add-apt-repository --remove "deb-src http://linux.dropbox.com/ubuntu $(lsb_release --short --codename) main" > /dev/null
 sudo ${option_sudo_prompt_password} apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+echo -e ${message_update_cache}
+sudo ${option_sudo_prompt_password} ${command_apt_get_update_package_cache} >> update_cache.log
 sudo ${option_sudo_prompt_password} ${command_apt_get_install_package} dropbox
-#因為軟體包裹會安裝自己的軟體來源，所以把我們之前建好的移除掉
-sudo ${option_sudo_prompt_password} add-apt-repository --remove "deb http://linux.dropbox.com/ubuntu $(lsb_release --short --codename) main" > /dev/null
 
 #=====不需要新增軟體來源的軟體=====
 echo -e '
