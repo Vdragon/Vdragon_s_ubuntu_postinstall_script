@@ -113,7 +113,7 @@ echo -e '
 =======================================
 安裝 Pidgin即時通訊軟體
 ======================================='
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:pidgin-developers/ppa
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
@@ -124,7 +124,7 @@ echo -e "
 安裝 Virtualbox虛擬機器軟體
 ======================================="
 read -p "請輸入您要加入「vboxusers」群組允許其使用VirtualBox USB裝置轉接功能的使用者帳號名稱：" vbox_user_name
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 #加入Virtualbox的官方軟體來源
 ${command_gain_privilege} ${command_add_software_source} "deb http://download.virtualbox.org/virtualbox/debian $(lsb_release --short --codename) contrib"
 ${command_gain_privilege} add-apt-repository --remove "deb-src http://download.virtualbox.org/virtualbox/debian $(lsb_release --short --codename) contrib" > /dev/null
@@ -142,7 +142,7 @@ echo -e "
 =======================================
 安裝 Unity桌面環境
 ======================================="
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:unity-team/ppa
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
@@ -152,7 +152,7 @@ echo -e "
 =======================================
 安裝 Boot-Repair開機載入程式修復工具
 ======================================="
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:yannubuntu/boot-repair
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
@@ -162,7 +162,7 @@ echo -e "
 =======================================
 安裝 GNOME 3桌面環境軟體系列
 ======================================="
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:gnome3-team/gnome3
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
@@ -172,7 +172,7 @@ echo -e "
 =======================================
 安裝 Google Chrome網頁瀏覽器
 ======================================="
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 #加入Google Chrome的官方軟體來源
 ${command_gain_privilege} ${command_add_software_source} "deb http://dl.google.com/linux/chrome/deb/ stable main"
 ${command_gain_privilege} add-apt-repository --remove "deb-src http://dl.google.com/linux/chrome/deb/ stable main" > /dev/null
@@ -186,7 +186,7 @@ echo -e '
 =======================================
 安裝 burg開機載入程式
 ======================================='
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:n-muench/burg
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
@@ -196,7 +196,7 @@ echo -e '
 =======================================
 安裝 Git版本控制系統
 ======================================='
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:git-core/ppa
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
@@ -206,7 +206,7 @@ echo -e '
 =======================================
 安裝 姬(H.I.M.E.)中文輸入法
 ======================================='
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 #${command_gain_privilege} ${command_add_software_source} ppa:hime-team/hime
 ${command_gain_privilege} ${command_add_software_source} "deb http://debian.luna.com.tw/$(lsb_release --short --codename) ./"
 echo -e ${message_update_cache}
@@ -230,7 +230,7 @@ echo -e '
 =======================================
 安裝 VLC影音播放軟體
 ======================================='
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:videolan/stable-daily
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
@@ -240,7 +240,7 @@ echo -e '
 =======================================
 安裝 LibreOffice 辦公室應用套裝軟體 3.5.x
 ======================================='
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:libreoffice/libreoffice-3-5
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
@@ -250,7 +250,7 @@ echo -e '
 =======================================
 安裝 Grub Customizer Grub開機載入程式設定工具
 ======================================='
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:danielrichter2007/grub-customizer
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
@@ -260,7 +260,7 @@ echo -e '
 =======================================
 安裝 Wine Windows平台程式相容層
 ======================================='
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:ubuntu-wine/ppa
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
@@ -270,7 +270,7 @@ echo -e '
 =======================================
 安裝 JDownloader檔案下載軟體
 ======================================='
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:jd-team/jdownloader
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
@@ -280,7 +280,7 @@ echo -e "
 =======================================
 安裝 K桌面環境(K Desktop Environment, KDE)軟體組合
 ======================================="
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:kubuntu-ppa/ppa
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
@@ -290,7 +290,7 @@ echo -e '
 =======================================
 安裝 multisystem可開機USB隨身碟製作工具
 ======================================='
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} apt-add-repository --yes 'deb http://liveusb.info/multisystem/depot all main'
 wget --output-document=- http://liveusb.info/multisystem/depot/multisystem.asc | \
 ${command_gain_privilege} apt-key add -
@@ -304,7 +304,7 @@ echo -e '
 =======================================
 安裝 Dropbox檔案同步軟體
 ======================================='
-echo -e ${message_add_source}
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} "deb http://linux.dropbox.com/ubuntu $(lsb_release --short --codename) main"
 ${command_gain_privilege} add-apt-repository --remove "deb-src http://linux.dropbox.com/ubuntu $(lsb_release --short --codename) main" > /dev/null
 ${command_gain_privilege} apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
