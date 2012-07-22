@@ -196,7 +196,7 @@ sudo ${option_sudo_prompt_password} im-switch -s hime
 #將HIME加入Unity桌面環境通知列(notification bar)的白名單中
 gsettings set com.canonical.Unity.Panel systray-whitelist "['hime']"
 sudo ${option_sudo_prompt_password} gsettings set com.canonical.Unity.Panel systray-whitelist "['hime']"
-sudo glib-compile-schemas /usr/share/glib-2.0/schemas
+sudo ${option_sudo_prompt_password} glib-compile-schemas /usr/share/glib-2.0/schemas
 
 echo -e '
 =======================================
