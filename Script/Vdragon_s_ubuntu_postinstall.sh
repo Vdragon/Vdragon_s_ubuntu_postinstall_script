@@ -104,8 +104,8 @@ echo -e "
 read -p "請輸入您要加入「vboxusers」群組允許其使用VirtualBox USB裝置轉接功能的使用者帳號名稱：" vbox_user_name
 echo -e ${message_add_source}
 #加入Virtualbox的官方軟體來源
-sudo ${option_sudo_prompt_password} add-apt-repository --yes "deb http://download.virtualbox.org/virtualbox/debian `lsb_release --short --codename` contrib"
-sudo ${option_sudo_prompt_password} add-apt-repository --remove "deb-src http://download.virtualbox.org/virtualbox/debian `lsb_release --short --codename` contrib" > /dev/null
+sudo ${option_sudo_prompt_password} add-apt-repository --yes "deb http://download.virtualbox.org/virtualbox/debian $(lsb_release --short --codename) contrib"
+sudo ${option_sudo_prompt_password} add-apt-repository --remove "deb-src http://download.virtualbox.org/virtualbox/debian $(lsb_release --short --codename) contrib" > /dev/null
 wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc
 sudo ${option_sudo_prompt_password} apt-key add ./oracle_vbox.asc
 echo -e ${message_update_cache}
@@ -186,7 +186,7 @@ echo -e '
 ======================================='
 echo -e ${message_add_source}
 #sudo ${option_sudo_prompt_password} add-apt-repository --yes ppa:hime-team/hime
-sudo ${option_sudo_prompt_password} add-apt-repository --yes "deb http://debian.luna.com.tw/`lsb_release --short --codename` ./"
+sudo ${option_sudo_prompt_password} add-apt-repository --yes "deb http://debian.luna.com.tw/$(lsb_release --short --codename) ./"
 echo -e ${message_update_cache}
 sudo ${option_sudo_prompt_password} ${command_apt_get_update_package_cache} >> update_cache.log
 sudo ${option_sudo_prompt_password} ${command_apt_get_install_package} hime
