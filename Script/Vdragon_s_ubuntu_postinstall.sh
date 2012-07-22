@@ -62,7 +62,7 @@ echo -e '
 ========================================
 建立暫時存放檔案的目錄「Temp_folder_created_by_Vdragon_s_ubuntu_postinstall_script」，如果執行完沒有成功刪除請自行刪除。
 ======================================='
-rm --recursive --force Temp_folder_created_by_Vdragon_s_ubuntu_postinstall_script 2>/dev/null
+rm --recursive --force Temp_folder_created_by_Vdragon_s_ubuntu_postinstall_script 2> /dev/null
 mkdir Temp_folder_created_by_Vdragon_s_ubuntu_postinstall_script
 cd Temp_folder_created_by_Vdragon_s_ubuntu_postinstall_script
 
