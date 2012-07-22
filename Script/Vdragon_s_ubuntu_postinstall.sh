@@ -82,7 +82,7 @@ ${command_sudo_gain_privilege} ${command_upgrade_system}
 #mkdir apt-fast
 #cd apt-fast
 #${command_sudo_gain_privilege} ${command_add_software_source} ppa:git-core/ppa
-#${command_sudo_gain_privilege} apt-get update
+#${command_sudo_gain_privilege} ${command_update_source_cache}
 #${command_sudo_gain_privilege} ${command_install_software} git axel
 
 #先安裝localepurge，這樣才會受惠之後的安裝
