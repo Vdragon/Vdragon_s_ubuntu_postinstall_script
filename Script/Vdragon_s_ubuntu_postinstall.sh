@@ -50,10 +50,6 @@ message_update_cache="更新軟體來源快取資料中，請稍候…"
 command_install_software="${command_aptitude_install_software}"
 command_upgrade_system="${command_aptitude_upgrade_system}"
 
-#訊息
-message_add_source="新增軟體來源中，請稍候…"
-message_update_cache="更新軟體來源快取資料中，請稍候…"
-
 ##先取得超級管理員權限
 #read -p "請輸入您的使用者帳號的密碼：" user_password
 ${command_sudo_gain_privilege} echo -e "成功取得超級使用者(superuser, root)權限。"
