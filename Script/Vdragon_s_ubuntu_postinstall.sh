@@ -70,42 +70,57 @@ echo -e '
     #check is a diagnostic tool; it updates the package cache and
     #checks for broken dependencies.
 echo -e ${message_update_cache}
-${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
+${command_gain_privilege} ${command_apt_get_update_source_cache} >> update_cache.log
 ${command_gain_privilege} apt-get --assume-yes --allow-unauthenticated --fix-broken install
-${command_gain_privilege} ${command_upgrade_system}
+${command_gain_privilege} ${command_apt_get_upgrade_system}
 
-#echo -e '
-#=======================================
-#安裝Git版本控制系統以使用apt-fast
-#======================================='
-#mkdir apt-fast
-#cd apt-fast
-#${command_gain_privilege} ${command_add_software_source} ppa:git-core/ppa
-#${command_gain_privilege} ${command_update_source_cache}
-#${command_gain_privilege} ${command_install_software} git axel
+##檢查本script程式軟體相依性(software dependency)是否滿足，這樣Script才能正常運行。
+##此區域不能使用廣域命令
+echo -e '
+=======================================
+檢查並安裝運行本script程式所需要的軟體
+======================================='
+#安裝軟體來源的命令應該要放在最前面，以免其他軟體需要安裝到軟體來源
+echo -e '
+=======================================
+確認 add-apt-repository軟體來源設定程式是否已被安裝
+======================================='
+##http://www.google.com/url?sa=t&source=web&cd=4&ved=0CEUQFjAD&url=http%3A%2F%2Fkirby86a.pixnet.net%2Fblog%2Fpost%2F45530809-%25E5%25B8%25B8%25E8%25A6%258B%25E6%258C%2587%25E4%25BB%25A4add-apt-repository%25E5%25BE%259E%25E5%2593%25AA%25E4%25BE%2586%253F&ei=CxibTpf7OYj-mAXrn4yHAg&usg=AFQjCNHkSvl4vM86dSL55OiwTi0r_zw6sg&sig2=Icg7-HmgQdliEeYLk9T1MA
+${command_gain_privilege} ${command_apt_get_install_software} python-software-properties
 
 #先安裝localepurge，這樣才會受惠之後的安裝
 echo -e '
 =======================================
-安裝 localepurge語系資料自動清除工具
+安裝 localepurge無用語系資料自動清除工具
 當進行 debconf 設定時建議選擇 en*語系以及您認識的語言的相關語系（例如zh*）
 任何沒有選擇的語系的語系資料將被 localepurge 自動移除
 ======================================='
-${command_gain_privilege} ${command_install_software} localepurge
-
-#檢查運行本Script程式的軟體依賴性是否滿足
-echo -e '
-=======================================
-確認 Aptitude軟體包裹管理程式是否已被安裝
-======================================='
-${command_gain_privilege} ${command_install_software} aptitude
+${command_gain_privilege} ${command_apt_get_install_software} localepurge
 
 echo -e '
 =======================================
-確認add-apt-repository程式是否已被安裝
+確認 Aptitude軟體包裹管理系統前端程式是否已被安裝
 ======================================='
-##http://www.google.com/url?sa=t&source=web&cd=4&ved=0CEUQFjAD&url=http%3A%2F%2Fkirby86a.pixnet.net%2Fblog%2Fpost%2F45530809-%25E5%25B8%25B8%25E8%25A6%258B%25E6%258C%2587%25E4%25BB%25A4add-apt-repository%25E5%25BE%259E%25E5%2593%25AA%25E4%25BE%2586%253F&ei=CxibTpf7OYj-mAXrn4yHAg&usg=AFQjCNHkSvl4vM86dSL55OiwTi0r_zw6sg&sig2=Icg7-HmgQdliEeYLk9T1MA
-${command_gain_privilege} ${command_install_software} python-software-properties
+${command_gain_privilege} ${command_apt_get_install_software} aptitude
+
+echo -e '
+=======================================
+確認 Git版本控制系統是否已被安裝
+======================================='
+echo -e ${message_add_software_source}
+${command_gain_privilege} ${command_add_apt_repository_add_software_source} ppa:git-core/ppa
+echo -e ${message_update_cache}
+${command_gain_privilege} ${command_apt_get_update_source_cache} >> update_cache.log
+${command_gain_privilege} ${command_apt_get_install_software} git
+
+echo -e '
+=======================================
+安裝 apt-fast軟體包裹管理系統前端程式
+======================================='
+${command_gain_privilege} ${command_add_apt_repository_add_software_source} ppa:apt-fast/stable
+echo -e ${message_update_cache}
+${command_gain_privilege} ${command_apt_get_update_source_cache} >> update_cache.log
+${command_gain_privilege} ${command_apt_get_install_software} apt-fast
 
 #=====需要新增軟體來源的軟體=====
 echo -e '
@@ -190,16 +205,6 @@ ${command_gain_privilege} ${command_add_software_source} ppa:n-muench/burg
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
 ${command_gain_privilege} ${command_install_software} burg
-
-echo -e '
-=======================================
-安裝 Git版本控制系統
-======================================='
-echo -e ${message_add_software_source}
-${command_gain_privilege} ${command_add_software_source} ppa:git-core/ppa
-echo -e ${message_update_cache}
-${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
-${command_gain_privilege} ${command_install_software} git
 
 echo -e '
 =======================================
