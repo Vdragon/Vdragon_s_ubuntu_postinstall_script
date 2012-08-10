@@ -27,7 +27,7 @@ command_sudo_gain_privilege="sudo ${option_sudo_prompt_password}"
 option_apt_get_action_confirmation="--assume-yes --allow-unauthenticated"
 command_apt_get_update_source_cache="apt-get update"
 command_apt_get_install_software="apt-get ${option_apt_get_action_confirmation} install"
-command_upgrade_system="apt-get ${option_apt_get_action_confirmation}  upgrade"
+command_apt_get_upgrade_system="apt-get ${option_apt_get_action_confirmation}  upgrade"
 
 #aptitude command settings
 option_aptitude_action_confirmation="--assume-yes --allow-untrusted"
