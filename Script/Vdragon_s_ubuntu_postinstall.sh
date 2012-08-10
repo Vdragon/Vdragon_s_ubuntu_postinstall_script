@@ -56,9 +56,8 @@ ${command_gain_privilege} echo -e "成功取得超級使用者(superuser, root)�
 
 echo -e '
 ========================================
-建立暫時存放檔案的目錄「Temp_folder_created_by_Vdragon_s_ubuntu_postinstall_script」，如果執行完沒有成功刪除請自行刪除。
+建立暫時存放本程序運行時所需檔案的目錄「Temp_folder_created_by_Vdragon_s_ubuntu_postinstall_script」，如果執行完不再需要請自行刪除。
 ======================================='
-rm --recursive --force Temp_folder_created_by_Vdragon_s_ubuntu_postinstall_script 2> /dev/null
 mkdir Temp_folder_created_by_Vdragon_s_ubuntu_postinstall_script
 cd Temp_folder_created_by_Vdragon_s_ubuntu_postinstall_script
 
@@ -411,17 +410,11 @@ echo -e '
 ======================================='
 ${command_gain_privilege} ${command_upgrade_system}
 
-echo -e '
-=======================================
-刪除本script程式暫時存放檔案的目錄「Temp_folder_created_by_Vdragon_s_ubuntu_postinstall_script」
-======================================='
-cd ..
-rm --force --recursive Temp_folder_created_by_Vdragon_s_ubuntu_postinstall_script
-
 ##結束
+cd ..
 echo -e '
 =======================================
-批次命令執行完畢。
-如果暫時存放檔案的目錄「Temp_folder_created_by_My_Ubuntu_preconfigure_script_sh」還存在於工作目錄的話請自行刪除。
+本Script程式執行完畢。
+如果暫時存放本Script程式運作所需檔案的目錄「Temp_folder_created_by_My_Ubuntu_preconfigure_script_sh」不再需要的話請自行刪除。
 ======================================='
 exit 0
