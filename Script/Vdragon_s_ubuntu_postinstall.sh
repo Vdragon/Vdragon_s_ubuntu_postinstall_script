@@ -117,6 +117,8 @@ echo -e '
 =======================================
 安裝 apt-fast軟體包裹管理系統前端程式
 ======================================='
+${command_gain_privilege} ${command_apt_get_install_software} axel aria2
+echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_apt_repository_add_software_source} ppa:apt-fast/stable
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_apt_get_update_source_cache} >> update_cache.log
