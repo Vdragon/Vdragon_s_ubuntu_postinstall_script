@@ -36,6 +36,10 @@ command_aptitude_install_software="aptitude ${option_aptitude_action_confirmatio
 command_aptitude_upgrade_system="aptitude ${option_aptitude_action_confirmation} upgrade"
 
 #apt-fast command settings
+option_apt_fast_action_confirmation="--assume-yes"
+command_apt_fast_update_source_cache="apt-fast update"
+command_apt_fast_install_software="apt-fast ${option_apt_fast_action_confirmation} install"
+command_apt_fast_upgrade_system="apt-fast ${option_apt_fast_action_confirmation} upgrade"
 
 #add-apt-repository command settings
 option_add_apt_repository_confirmation="--yes"
@@ -45,10 +49,10 @@ command_add_apt_repository_add_software_source="add-apt-repository ${option_add_
 command_gain_privilege="${command_sudo_gain_privilege}"
 command_add_software_source="${command_add_apt_repository_add_software_source}"
 message_add_software_source="新增軟體來源中，請稍候…"
-command_update_source_cache="${command_aptitude_update_source_cache}"
+command_update_source_cache="${command_apt_fast_update_source_cache}"
 message_update_cache="更新軟體來源快取資料中，請稍候…"
-command_install_software="${command_aptitude_install_software}"
-command_upgrade_system="${command_aptitude_upgrade_system}"
+command_install_software="${command_apt_fast_install_software}"
+command_upgrade_system="${command_apt_fast_upgrade_system}"
 
 ##先取得超級管理員權限
 #read -p "請輸入您的使用者帳號的密碼：" user_password
