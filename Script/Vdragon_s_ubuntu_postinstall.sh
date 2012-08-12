@@ -45,7 +45,9 @@ command_apt_fast_upgrade_system="apt-fast ${option_apt_fast_action_confirmation}
 option_add_apt_repository_confirmation="--yes"
 command_add_apt_repository_add_software_source="add-apt-repository ${option_add_apt_repository_confirmation}"
 
+#廣域命令設定
 #global command settings
+#這是實際上安裝軟體時所用的命令
 command_gain_privilege="${command_sudo_gain_privilege}"
 command_add_software_source="${command_add_apt_repository_add_software_source}"
 message_add_software_source="新增軟體來源中，請稍候…"
