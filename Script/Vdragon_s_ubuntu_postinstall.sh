@@ -19,7 +19,7 @@ echo -e '
   本script程式將會修改您系統的軟體倉庫設定以及安裝軟體，可能會造成無法預知的問題，請自行承擔後果！
 ================================'
 #sudo command settings
-message_sudo_prompt_password="請輸入%p的密碼："
+message_sudo_prompt_password="請輸入%p的密碼以獲取系統管理權限："
 option_sudo_prompt_password="-p ${message_sudo_prompt_password}"
 command_sudo_gain_privilege="sudo ${option_sudo_prompt_password}"
 
