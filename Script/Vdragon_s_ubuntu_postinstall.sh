@@ -1,10 +1,11 @@
 #!/bin/bash
 ##上一句用來宣告執行script所使用的shell程式
-
+##================================
 ##Shell script名稱：Vdragons_Ubuntu_postinstall_script
 ##此Shellscript所適用的平台：Ubuntu 12.04LTS（部份適用於其他基於Debian的Linux發行版本）
 ##智慧財產授權：創用CC(BY-NC-SA)目前的最新版本
 ##傳回值：0-正常結束
+##================================
 echo -e '
 ================================
 Ｖ字龍的Ubuntu安裝後預先設定script程式
@@ -47,6 +48,7 @@ command_add_apt_repository_add_software_source="add-apt-repository ${option_add_
 
 #廣域命令設定
 #global command settings
+#================================
 #這是實際上安裝軟體時所用的命令
 command_gain_privilege="${command_sudo_gain_privilege}"
 command_add_software_source="${command_add_apt_repository_add_software_source}"
