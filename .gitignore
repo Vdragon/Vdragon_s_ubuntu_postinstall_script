@@ -11,6 +11,9 @@
 #  build/←忽略build目錄下的所有檔案
 #  doc/*.txt←doc/a.txt會被忽略但是doc/a/b.txt則不會被忽略（那怎樣才能忽略呢？）
 ##我自己的設定##
+#ignore Temp folder
+Temp*/
+
 #Eclipse CDT會將可執行檔跟object檔案放在configuration同名的資料夾，加入我自己慣用的名稱設定
 Debug*/
 Release*/
