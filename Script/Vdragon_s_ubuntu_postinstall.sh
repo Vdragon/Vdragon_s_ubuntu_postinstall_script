@@ -415,6 +415,12 @@ echo -e "
 ======================================="
 ${command_gain_privilege} ${command_install_software} deborphan
 
+echo -e "
+=======================================
+安裝 kfind檔案搜索工具
+======================================="
+${command_gain_privilege} ${command_install_software} kfind
+
 ##後安裝階段
 echo -e "
 =======================================
