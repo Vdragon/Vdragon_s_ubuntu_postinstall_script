@@ -70,6 +70,7 @@
   Grub Customizer Grub開機載入程式設定工具
   Wine Windows平台程式相容層
   Dropbox檔案同步軟體
+  Ubuntu Tweak系統調校工具
 
 移除的軟體 | Software Removal
 　ibus輸入法
