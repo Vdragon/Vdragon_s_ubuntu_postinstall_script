@@ -421,6 +421,12 @@ echo -e "
 ======================================="
 ${command_gain_privilege} ${command_install_software} kfind
 
+echo -e "
+=======================================
+安裝 Asunder CD ripper音樂CD轉錄工具
+======================================="
+${command_gain_privilege} ${command_install_software} asunder
+
 ##後安裝階段
 echo -e "
 =======================================

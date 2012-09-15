@@ -54,6 +54,7 @@
   K3b光碟燒錄程式
   deborphan孤立軟體包裹移除工具
   kfind檔案搜索工具
+  Asunder CD ripper音樂CD轉錄工具
 
   =====官方軟體來源的版本=====
   Pidgin即時通訊軟體
