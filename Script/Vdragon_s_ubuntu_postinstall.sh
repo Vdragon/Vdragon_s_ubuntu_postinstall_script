@@ -301,7 +301,7 @@ ${command_gain_privilege} add-apt-repository --remove "deb-src http://linux.drop
 ${command_gain_privilege} apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
-${command_gain_privilege} ${command_install_software} dropbox
+${command_gain_privilege} ${command_install_software} dropbox python-gpgme 
 
 echo -e "
 =======================================
