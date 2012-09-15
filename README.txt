@@ -53,7 +53,6 @@
   p7zip壓縮／封裝檔解壓縮程式以及RAR格式壓縮檔解壓縮支援
   K3b光碟燒錄程式
   deborphan孤立軟體包裹移除工具
-  DeaDBeeF音樂播放軟體
 
   =====官方軟體來源的版本=====
   Pidgin即時通訊軟體
@@ -71,6 +70,7 @@
   Wine Windows平台程式相容層
   Dropbox檔案同步軟體
   Ubuntu Tweak系統調校工具
+  DeaDBeeF音樂播放軟體
 
 移除的軟體 | Software Removal
 　ibus輸入法
