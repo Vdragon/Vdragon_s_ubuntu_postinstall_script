@@ -75,6 +75,7 @@
   Dropbox檔案同步軟體
   Ubuntu Tweak系統調校工具
   DeaDBeeF音樂播放軟體
+  XBMC影音播放軟體
 
 移除的軟體 | Software Removal
 　ibus輸入法

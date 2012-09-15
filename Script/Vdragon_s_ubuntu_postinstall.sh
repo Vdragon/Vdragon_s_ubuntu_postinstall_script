@@ -323,6 +323,16 @@ echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
 ${command_gain_privilege} ${command_install_software} ubuntu-tweak
 
+echo -e "
+=======================================
+${message_install_or_update} XBMC影音播放軟體
+======================================="
+echo -e ${message_add_software_source}
+${command_gain_privilege} ${command_add_software_source} ppa:team-xbmc/ppa
+echo -e ${message_update_cache}
+${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
+${command_gain_privilege} ${command_install_software} xbmc
+
 #=====不需要新增軟體來源的軟體=====
 echo -e "
 =======================================
