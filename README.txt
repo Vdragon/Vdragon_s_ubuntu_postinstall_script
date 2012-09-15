@@ -56,6 +56,7 @@
   kfind檔案搜索工具
   Asunder CD ripper音樂CD轉錄工具
   MusicBrainz Picard歌曲中介資料搜尋軟體
+  Stellarium星象模擬軟體
 
   =====官方軟體來源的版本=====
   Pidgin即時通訊軟體

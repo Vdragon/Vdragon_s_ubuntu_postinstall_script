@@ -433,6 +433,12 @@ echo -e "
 ======================================="
 ${command_gain_privilege} ${command_install_software} picard
 
+echo -e "
+=======================================
+安裝 Stellarium星象模擬軟體
+======================================="
+${command_gain_privilege} ${command_install_software} stellarium
+
 ##後安裝階段
 echo -e "
 =======================================
