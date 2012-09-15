@@ -289,7 +289,7 @@ echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:kubuntu-ppa/ppa
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
-${command_gain_privilege} ${command_install_software} kde-standard kdesudo kde-l10n-zhtw kdesdk-dolphin-plugins gtk2-engines-oxygen gtk3-engines-oxygen
+${command_gain_privilege} ${command_install_software} kde-standard kdesudo kde-l10n-zhtw kdesdk-dolphin-plugins gtk2-engines-oxygen gtk3-engines-oxygen bluedevil kcron kde-config-gtk kde-config-tablet kde-config-telepathy-accounts kde-config-touchpad kdenetwork-filesharing system-config-printer-kde printer-applet
 
 echo -e "
 =======================================
