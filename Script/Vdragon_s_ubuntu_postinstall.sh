@@ -427,6 +427,12 @@ echo -e "
 ======================================="
 ${command_gain_privilege} ${command_install_software} asunder
 
+echo -e "
+=======================================
+安裝 MusicBrainz Picard歌曲中介資料搜尋軟體
+======================================="
+${command_gain_privilege} ${command_install_software} picard
+
 ##後安裝階段
 echo -e "
 =======================================
