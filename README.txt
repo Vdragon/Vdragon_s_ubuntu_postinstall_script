@@ -75,6 +75,7 @@
   Ubuntu Tweak系統調校工具
   DeaDBeeF音樂播放軟體
   XBMC影音播放軟體
+  CDRTools 光碟燒錄相關工具
 
 移除的軟體 | Software Removal
 　ibus輸入法
