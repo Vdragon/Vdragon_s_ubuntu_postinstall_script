@@ -61,7 +61,6 @@
   =====官方軟體來源的版本=====
   Pidgin即時通訊軟體
   Virtualbox虛擬機器軟體
-  Unity 桌面環境
   Boot-Repair 開機載入程式修復工具
   GNOME 3桌面環境軟體系列
   Google Chrome網頁瀏覽器
