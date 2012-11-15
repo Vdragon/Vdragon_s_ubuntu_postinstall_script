@@ -169,7 +169,7 @@ echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
 #Ubuntu/Debian users might want to install the dkms package to ensure that the VirtualBox host kernel modules (vboxdrv, vboxnetflt and vboxnetadp) are properly updated if the linux kernel version changes during the next apt-get upgrade.
 ${command_gain_privilege} ${command_install_software} dkms
-${command_gain_privilege} ${command_install_software} virtualbox-4.1
+${command_gain_privilege} ${command_install_software} virtualbox-4.2
 #add $user_name to vboxusers group
 ${command_gain_privilege} usermod --append --groups vboxusers $vbox_user_name
 
