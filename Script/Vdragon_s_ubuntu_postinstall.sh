@@ -458,6 +458,13 @@ echo -e "
 安裝 Stellarium 星象模擬軟體
 ======================================="
 ${command_gain_privilege} ${command_install_software} stellarium
+
+#=====具有潛在風險的軟體，欲安裝請取消註解=====
+# Install_BURG_bootloader
+#source ../Script/Dangerous_area/Install_BURG_bootloader/Install_BURG.sh
+# Install_multisystem_liveUSB_maker
+#source ../Script/Dangerous_area/Install_multisystem_liveUSB_maker/Install_multisystem.sh
+
 ###### 安裝階段結束 | Install phase ended ######
 
 ##後安裝階段
