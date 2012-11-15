@@ -22,7 +22,7 @@ echo -e "
 ###### 環境設定 | Environment settings ######
 ## 設定環境變數 | Set environment variables
 #sudo command settings
-message_sudo_prompt_password="請輸入 %p 的密碼以獲取系統管理權限："
+message_sudo_prompt_password="請輸入「%p」的密碼以獲取系統管理權限："
 option_sudo_prompt_password="-p ${message_sudo_prompt_password}"
 command_sudo_gain_privilege="sudo ${option_sudo_prompt_password}"
 
