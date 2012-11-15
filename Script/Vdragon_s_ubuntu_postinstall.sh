@@ -142,6 +142,7 @@ ${command_gain_privilege} ${command_apt_get_update_source_cache} >> update_cache
 ${command_gain_privilege} ${command_apt_get_install_software} apt-fast
 ###### 安裝前階段結束 | Pre-install phase ended ######
 
+###### 安裝階段 | Install phase ######
 #=====需要新增軟體來源的軟體=====
 echo -e "
 =======================================
@@ -457,6 +458,7 @@ echo -e "
 安裝 Stellarium 星象模擬軟體
 ======================================="
 ${command_gain_privilege} ${command_install_software} stellarium
+###### 安裝階段結束 | Install phase ended ######
 
 ##後安裝階段
 echo -e "
