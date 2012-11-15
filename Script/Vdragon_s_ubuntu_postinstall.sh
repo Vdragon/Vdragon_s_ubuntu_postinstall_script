@@ -1,14 +1,14 @@
 #!/bin/bash
-##上一句用來宣告執行script所使用的shell程式
+##上一句用來宣告執行 script 所使用的 shell 程式
 ##================================
-##Shell script名稱：Vdragons_Ubuntu_postinstall_script
-##此Shellscript所適用的平台：Ubuntu 12.04LTS（部份適用於其他基於Debian的Linux發行版本）
+##Shell script 名稱：Vdragons_Ubuntu_postinstall_script
+##此 Shellscript 所適用的平台：Ubuntu 12.04LTS（部份適用於其他基於 Debian 的 Linux 發行版本）
 ##智慧財產授權：創用CC(BY-NC-SA)目前的最新版本
 ##傳回值：0-正常結束
 ##================================
 echo -e "
 ================================
-Ｖ字龍的Ubuntu安裝後預先設定script程式
+Ｖ字龍的 Ubuntu 安裝後預先設定 script 程式
 開發者 | Developer
   Ｖ字龍(Vdragon)
 已知問題 | Known Issues
@@ -87,12 +87,12 @@ ${command_gain_privilege} ${command_apt_get_upgrade_system}
 ##此區域不能使用廣域命令
 echo -e "
 =======================================
-檢查並安裝運行本script程式所需要的軟體
+檢查並安裝運行本 script 程式所需要的軟體
 ======================================="
 #安裝軟體來源的命令應該要放在最前面，以免其他軟體需要安裝到軟體來源
 echo -e "
 =======================================
-確認 add-apt-repository軟體來源設定程式是否已被安裝
+確認 add-apt-repository 軟體來源設定程式是否已被安裝
 ======================================="
 ##http://www.google.com/url?sa=t&source=web&cd=4&ved=0CEUQFjAD&url=http%3A%2F%2Fkirby86a.pixnet.net%2Fblog%2Fpost%2F45530809-%25E5%25B8%25B8%25E8%25A6%258B%25E6%258C%2587%25E4%25BB%25A4add-apt-repository%25E5%25BE%259E%25E5%2593%25AA%25E4%25BE%2586%253F&ei=CxibTpf7OYj-mAXrn4yHAg&usg=AFQjCNHkSvl4vM86dSL55OiwTi0r_zw6sg&sig2=Icg7-HmgQdliEeYLk9T1MA
 ${command_gain_privilege} ${command_apt_get_install_software} python-software-properties
@@ -100,7 +100,7 @@ ${command_gain_privilege} ${command_apt_get_install_software} python-software-pr
 #先安裝localepurge，這樣才會受惠之後的安裝
 echo -e "
 =======================================
-安裝 localepurge無用語系資料自動清除工具
+安裝 localepurge 無用語系資料自動清除工具
 當進行 debconf 設定時建議選擇 en*語系以及您認識的語言的相關語系（例如zh*）
 任何沒有選擇的語系的語系資料將被 localepurge 自動移除
 ======================================="
@@ -108,13 +108,13 @@ ${command_gain_privilege} ${command_apt_get_install_software} localepurge
 
 echo -e "
 =======================================
-確認 Aptitude軟體包裹管理系統前端程式是否已被安裝
+確認 Aptitude 軟體包裹管理系統前端程式是否已被安裝
 ======================================="
 ${command_gain_privilege} ${command_apt_get_install_software} aptitude
 
 echo -e "
 =======================================
-確認 Git版本控制系統是否已被安裝
+確認 Git 版本控制系統是否已被安裝
 ======================================="
 echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_apt_repository_add_software_source} ppa:git-core/ppa
@@ -124,7 +124,7 @@ ${command_gain_privilege} ${command_apt_get_install_software} git
 
 echo -e "
 =======================================
-${message_install_or_update} apt-fast軟體包裹管理系統前端程式
+${message_install_or_update} apt-fast 軟體包裹管理系統前端程式
 ======================================="
 ${command_gain_privilege} ${command_apt_get_install_software} axel aria2
 echo -e ${message_add_software_source}
@@ -136,7 +136,7 @@ ${command_gain_privilege} ${command_apt_get_install_software} apt-fast
 #=====需要新增軟體來源的軟體=====
 echo -e "
 =======================================
-${message_install_or_update} Pidgin即時通訊軟體
+${message_install_or_update} Pidgin 即時通訊軟體
 ======================================="
 echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:pidgin-developers/ppa
@@ -146,7 +146,7 @@ ${command_gain_privilege} ${command_install_software} pidgin
 
 echo -e "
 =======================================
-${message_install_or_update} Virtualbox虛擬機器軟體
+${message_install_or_update} Virtualbox 虛擬機器軟體
 ======================================="
 read -p "請輸入您要加入「vboxusers」群組允許其使用VirtualBox USB裝置轉接功能的使用者帳號名稱：" vbox_user_name
 echo -e ${message_add_software_source}
@@ -165,7 +165,7 @@ ${command_gain_privilege} usermod --append --groups vboxusers $vbox_user_name
 
 echo -e "
 =======================================
-${message_install_or_update} Boot-Repair開機載入程式修復工具
+${message_install_or_update} Boot-Repair 開機載入程式修復工具
 ======================================="
 echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:yannubuntu/boot-repair
@@ -175,7 +175,7 @@ ${command_gain_privilege} ${command_install_software} boot-repair
 
 echo -e "
 =======================================
-${message_install_or_update} GNOME 3桌面環境軟體系列
+${message_install_or_update} GNOME 3 桌面環境軟體系列
 ======================================="
 echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:gnome3-team/gnome3
@@ -185,7 +185,7 @@ ${command_gain_privilege} ${command_install_software} gnome
 
 echo -e "
 =======================================
-${message_install_or_update} Google Chrome網頁瀏覽器
+${message_install_or_update} Google Chrome 網頁瀏覽器
 ======================================="
 echo -e ${message_add_software_source}
 #加入Google Chrome的官方軟體來源
@@ -217,13 +217,13 @@ ${command_gain_privilege} glib-compile-schemas /usr/share/glib-2.0/schemas
 
 echo -e "
 =======================================
-移除 ibus輸入法
+移除 ibus 輸入法
 ======================================="
 ${command_gain_privilege} apt-get --assume-yes purge ibus ibus-chewing
 
 echo -e "
 =======================================
-${message_install_or_update} VLC影音播放軟體
+${message_install_or_update} VLC 影音播放軟體
 ======================================="
 echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:videolan/stable-daily
@@ -243,7 +243,7 @@ ${command_gain_privilege} ${command_install_software} libreoffice libreoffice-gn
 
 echo -e "
 =======================================
-${message_install_or_update} Grub Customizer Grub開機載入程式設定工具
+${message_install_or_update} Grub Customizer Grub 開機載入程式設定工具
 ======================================="
 echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:danielrichter2007/grub-customizer
@@ -253,7 +253,7 @@ ${command_gain_privilege} ${command_install_software} grub-customizer
 
 echo -e "
 =======================================
-${message_install_or_update} Wine Windows平台程式相容層
+${message_install_or_update} Wine Windows 平台程式相容層
 ======================================="
 echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:ubuntu-wine/ppa
@@ -263,7 +263,7 @@ ${command_gain_privilege} ${command_install_software} wine
 
 echo -e "
 =======================================
-${message_install_or_update} JDownloader檔案下載軟體
+${message_install_or_update} JDownloader 檔案下載軟體
 ======================================="
 echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:jd-team/jdownloader
@@ -283,7 +283,7 @@ ${command_gain_privilege} ${command_install_software} kde-standard kdesudo kde-l
 
 echo -e "
 =======================================
-${message_install_or_update} Dropbox檔案同步軟體
+${message_install_or_update} Dropbox 檔案同步軟體
 ======================================="
 echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} "deb http://linux.dropbox.com/ubuntu $(lsb_release --short --codename) main"
@@ -295,7 +295,7 @@ ${command_gain_privilege} ${command_install_software} dropbox python-gpgme
 
 echo -e "
 =======================================
-${message_install_or_update} DeaDBeeF音樂播放軟體
+${message_install_or_update} DeaDBeeF 音樂播放軟體
 ======================================="
 echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:alexey-smirnov/deadbeef
@@ -305,7 +305,7 @@ ${command_gain_privilege} ${command_install_software} deadbeef
 
 echo -e "
 =======================================
-${message_install_or_update} Ubuntu Tweak系統調整工具
+${message_install_or_update} Ubuntu Tweak 系統調整工具
 ======================================="
 echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:tualatrix/ppa
@@ -315,7 +315,7 @@ ${command_gain_privilege} ${command_install_software} ubuntu-tweak
 
 echo -e "
 =======================================
-${message_install_or_update} XBMC影音播放軟體
+${message_install_or_update} XBMC 影音播放軟體
 ======================================="
 echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:team-xbmc/ppa
@@ -326,56 +326,56 @@ ${command_gain_privilege} ${command_install_software} xbmc
 #=====不需要新增軟體來源的軟體=====
 echo -e "
 =======================================
-安裝 Synaptic軟體包裹管理程式
+安裝 Synaptic 軟體包裹管理程式
 ======================================="
 ${command_gain_privilege} ${command_install_software} synaptic
 
 echo -e "
 =======================================
-安裝 ubuntu非自由軟體集合
+安裝 ubuntu 非自由軟體集合
 含有大部份的影音編／解碼器、Adobe Flash等常用的非自由軟體
 ======================================="
 ${command_gain_privilege} ${command_install_software} ubuntu-restricted-extras
 
 echo -e "
 =======================================
-安裝 Vim文字編輯器
+安裝 Vim 文字編輯器
 ======================================="
 ${command_gain_privilege} ${command_install_software} vim
 
 echo -e "
 =======================================
-安裝 htop系統資源監視程式
+安裝 htop 系統資源監視程式
 ======================================="
 ${command_gain_privilege} ${command_install_software} htop
 
 echo -e "
 =======================================
-安裝 make-kpkg Linux作業系統核心Debian軟體包裹製作工具
+安裝 make-kpkg Linux 作業系統核心 Debian 軟體包裹製作工具
 ======================================="
 ${command_gain_privilege} ${command_install_software} kernel-package fakeroot
 
 echo -e "
 =======================================
-安裝 bleachbit檔案清理工具
+安裝 bleachbit 檔案清理工具
 ======================================="
 ${command_gain_privilege} ${command_install_software} bleachbit
 
 echo -e "
 =======================================
-安裝 ppa-purge PPA還原程式
+安裝 ppa-purge PPA 還原程式
 ======================================="
 ${command_gain_privilege} ${command_install_software} ppa-purge
 
 echo -e "
 =======================================
-安裝 powertop電力消耗監視程式
+安裝 powertop 電力消耗監視程式
 ======================================="
 ${command_gain_privilege} ${command_install_software} powertop
 
 echo -e "
 =======================================
-安裝 Eclipse整合式開發環境
+安裝 Eclipse 整合式開發環境
 ======================================="
 ${command_gain_privilege} ${command_install_software} eclipse
 
@@ -393,49 +393,49 @@ ${command_gain_privilege} ${command_install_software} g++
 
 echo -e "
 =======================================
-安裝 valgrind程式除錯工具
+安裝 valgrind 程式除錯工具
 ======================================="
 ${command_gain_privilege} ${command_install_software} valgrind
 
 echo -e "
 =======================================
-安裝 p7zip壓縮／封裝檔解壓縮程式以及RAR格式壓縮檔解壓縮支援
+安裝 p7zip 壓縮／封裝檔解壓縮程式以及 RAR 格式壓縮檔解壓縮支援
 ======================================="
 ${command_gain_privilege} ${command_install_software} p7zip-full p7zip-rar
 
 echo -e "
 =======================================
-安裝 K3b光碟燒錄程式
+安裝 K3b 光碟燒錄程式
 ======================================="
 ${command_gain_privilege} ${command_install_software} k3b
 
 echo -e "
 =======================================
-安裝 deborphan孤立軟體包裹移除工具
+安裝 deborphan 孤立軟體包裹移除工具
 ======================================="
 ${command_gain_privilege} ${command_install_software} deborphan
 
 echo -e "
 =======================================
-安裝 kfind檔案搜索工具
+安裝 kfind 檔案搜索工具
 ======================================="
 ${command_gain_privilege} ${command_install_software} kfind
 
 echo -e "
 =======================================
-安裝 Asunder CD ripper音樂CD轉錄工具
+安裝 Asunder CD ripper 音樂CD轉錄工具
 ======================================="
 ${command_gain_privilege} ${command_install_software} asunder
 
 echo -e "
 =======================================
-安裝 MusicBrainz Picard歌曲中介資料搜尋軟體
+安裝 MusicBrainz Picard 歌曲中介資料搜尋軟體
 ======================================="
 ${command_gain_privilege} ${command_install_software} picard
 
 echo -e "
 =======================================
-安裝 Stellarium星象模擬軟體
+安裝 Stellarium 星象模擬軟體
 ======================================="
 ${command_gain_privilege} ${command_install_software} stellarium
 
@@ -450,7 +450,7 @@ ${command_gain_privilege} ${command_upgrade_system}
 cd ..
 echo -e "
 =======================================
-本Script程式執行完畢。
-如果暫時存放本Script程式運作所需檔案的目錄「Temp_folder_created_by_My_Ubuntu_preconfigure_script_sh」不再需要的話請自行刪除。
+本 Script 程式執行完畢。
+如果暫時存放本 Script 程式運作所需檔案的目錄「Temp_folder_created_by_My_Ubuntu_preconfigure_script_sh」不再需要的話請自行刪除。
 ======================================="
 exit 0
