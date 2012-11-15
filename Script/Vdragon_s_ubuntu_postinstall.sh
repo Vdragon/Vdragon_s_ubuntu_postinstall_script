@@ -34,7 +34,7 @@ command_apt_get_upgrade_system="apt-get ${option_apt_get_action_confirmation}  u
 option_aptitude_action_confirmation="--assume-yes --allow-untrusted"
 command_aptitude_update_source_cache="aptitude update"
 command_aptitude_install_software="aptitude ${option_aptitude_action_confirmation} install"
-command_aptitude_upgrade_system="aptitude ${option_aptitude_action_confirmation} upgrade"
+command_aptitude_upgrade_system="aptitude ${option_aptitude_action_confirmation} safe-upgrade"
 
 #apt-fast command settings
 option_apt_fast_action_confirmation="--assume-yes"
@@ -53,10 +53,10 @@ command_add_apt_repository_add_software_source="add-apt-repository ${option_add_
 command_gain_privilege="${command_sudo_gain_privilege}"
 command_add_software_source="${command_add_apt_repository_add_software_source}"
 message_add_software_source="新增軟體來源中，請稍候…"
-command_update_source_cache="${command_apt_fast_update_source_cache}"
+command_update_source_cache="${command_aptitude_update_source_cache}"
 message_update_cache="更新軟體來源快取資料中，請稍候…"
-command_install_software="${command_apt_fast_install_software}"
-command_upgrade_system="${command_apt_fast_upgrade_system}"
+command_install_software="${command_aptitude_install_software}"
+command_upgrade_system="${command_aptitude_upgrade_system}"
 message_install_or_update="安裝／升級"
 
 ##先取得超級管理員權限
