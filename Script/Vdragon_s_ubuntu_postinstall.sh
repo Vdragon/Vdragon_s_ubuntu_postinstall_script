@@ -17,7 +17,7 @@ echo -e "
 官方網站 | Official Site
   https://github.com/Vdragon/Vdragon_s_ubuntu_postinstall_script
 警告 | Warning
-  本 script 程式將會修改您系統的軟體倉庫設定以及安裝軟體，可能會造成無法預知的問題，請自行承擔後果！
+  本 script 程式將會修改您系統的軟體來源設定以及安裝軟體，可能會造成無法預知的問題，請自行承擔後果！
 ================================"
 #sudo command settings
 message_sudo_prompt_password="請輸入 %p 的密碼以獲取系統管理權限："
