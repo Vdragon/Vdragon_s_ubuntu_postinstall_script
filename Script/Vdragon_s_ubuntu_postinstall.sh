@@ -279,7 +279,7 @@ echo -e ${message_add_software_source}
 ${command_gain_privilege} ${command_add_software_source} ppa:kubuntu-ppa/ppa
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
-${command_gain_privilege} ${command_install_software} kde-standard kdesudo kde-l10n-zhtw kdesdk-dolphin-plugins gtk2-engines-oxygen gtk3-engines-oxygen
+${command_gain_privilege} ${command_install_software} kde-standard kdesudo kde-l10n-zhtw kdesdk-dolphin-plugins gtk2-engines-oxygen gtk3-engines-oxygen bluedevil kcron kde-config-gtk kde-config-tablet kde-config-telepathy-accounts kde-config-touchpad kdenetwork-filesharing system-config-printer-kde printer-applet
 
 echo -e "
 =======================================
@@ -302,6 +302,26 @@ ${command_gain_privilege} ${command_add_software_source} ppa:alexey-smirnov/dead
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
 ${command_gain_privilege} ${command_install_software} deadbeef
+
+echo -e "
+=======================================
+${message_install_or_update} Ubuntu Tweak系統調整工具
+======================================="
+echo -e ${message_add_software_source}
+${command_gain_privilege} ${command_add_software_source} ppa:tualatrix/ppa
+echo -e ${message_update_cache}
+${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
+${command_gain_privilege} ${command_install_software} ubuntu-tweak
+
+echo -e "
+=======================================
+${message_install_or_update} XBMC影音播放軟體
+======================================="
+echo -e ${message_add_software_source}
+${command_gain_privilege} ${command_add_software_source} ppa:team-xbmc/ppa
+echo -e ${message_update_cache}
+${command_gain_privilege} ${command_update_source_cache} >> update_cache.log
+${command_gain_privilege} ${command_install_software} xbmc
 
 #=====不需要新增軟體來源的軟體=====
 echo -e "
@@ -394,6 +414,30 @@ echo -e "
 安裝 deborphan孤立軟體包裹移除工具
 ======================================="
 ${command_gain_privilege} ${command_install_software} deborphan
+
+echo -e "
+=======================================
+安裝 kfind檔案搜索工具
+======================================="
+${command_gain_privilege} ${command_install_software} kfind
+
+echo -e "
+=======================================
+安裝 Asunder CD ripper音樂CD轉錄工具
+======================================="
+${command_gain_privilege} ${command_install_software} asunder
+
+echo -e "
+=======================================
+安裝 MusicBrainz Picard歌曲中介資料搜尋軟體
+======================================="
+${command_gain_privilege} ${command_install_software} picard
+
+echo -e "
+=======================================
+安裝 Stellarium星象模擬軟體
+======================================="
+${command_gain_privilege} ${command_install_software} stellarium
 
 ##後安裝階段
 echo -e "
