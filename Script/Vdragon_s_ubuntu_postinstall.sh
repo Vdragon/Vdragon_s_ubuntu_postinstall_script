@@ -62,7 +62,7 @@ command_upgrade_system="${command_aptitude_upgrade_system}"
 message_install_or_update="安裝／升級"
 
 #Add Ctrl-C handler to abort script immediately
-trap "echo '您中止了程式運行。'; exit;" SIGINT SIGTERM
+trap "echo -e '\n您中止了程式運行。'; exit;" SIGINT SIGTERM
 
 ###### 環境設定結束 | Environment settings ended ######
 
