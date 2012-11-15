@@ -60,6 +60,10 @@ message_update_cache="更新軟體來源快取資料中，請稍候…"
 command_install_software="${command_aptitude_install_software}"
 command_upgrade_system="${command_aptitude_upgrade_system}"
 message_install_or_update="安裝／升級"
+
+#Add Ctrl-C handler to abort script immediately
+trap "echo '您中止了程式運行。'; exit;'" SIGINT SIGTERM
+
 ###### 環境設定結束 | Environment settings ended ######
 
 ###### 安裝前階段 | Pre-install phase ######
