@@ -19,6 +19,8 @@ echo -e "
 警告 | Warning
   本 script 程式將會修改您系統的軟體來源設定以及安裝軟體，可能會造成無法預知的問題，請自行承擔後果！
 ================================"
+###### 環境設定 | Environment settings ######
+## 設定環境變數 | Set environment variables
 #sudo command settings
 message_sudo_prompt_password="請輸入 %p 的密碼以獲取系統管理權限："
 option_sudo_prompt_password="-p ${message_sudo_prompt_password}"
@@ -58,7 +60,9 @@ message_update_cache="更新軟體來源快取資料中，請稍候…"
 command_install_software="${command_aptitude_install_software}"
 command_upgrade_system="${command_aptitude_upgrade_system}"
 message_install_or_update="安裝／升級"
+###### 環境設定結束 | Environment settings ended ######
 
+###### 安裝前階段 | Pre-install phase ######
 ##先取得超級管理員權限
 #read -p "請輸入您的使用者帳號的密碼：" user_password
 ${command_gain_privilege} echo -e "成功取得超級使用者(superuser, root)權限。"
@@ -132,6 +136,7 @@ ${command_gain_privilege} ${command_add_apt_repository_add_software_source} ppa:
 echo -e ${message_update_cache}
 ${command_gain_privilege} ${command_apt_get_update_source_cache} >> update_cache.log
 ${command_gain_privilege} ${command_apt_get_install_software} apt-fast
+###### 安裝前階段結束 | Pre-install phase ended ######
 
 #=====需要新增軟體來源的軟體=====
 echo -e "
