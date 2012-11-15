@@ -2,7 +2,7 @@
 ##上一句用來宣告執行 script 所使用的 shell 程式
 ##================================
 ##Shell script 名稱：Vdragons_Ubuntu_postinstall_script
-##此 Shellscript 所適用的平台：Ubuntu 12.04LTS（部份適用於其他基於 Debian 的 Linux 發行版本）
+##此 Shellscript 所適用的平台：Ubuntu 12.04LTS（部份適用於其他基於 Debian 的 Linux 散佈版本）
 ##智慧財產授權：創用CC(BY-NC-SA)目前的最新版本
 ##傳回值：0-正常結束
 ##================================
