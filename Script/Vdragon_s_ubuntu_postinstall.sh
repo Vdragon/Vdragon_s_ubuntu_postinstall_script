@@ -63,9 +63,9 @@ message_install_or_update="安裝／升級"
 ###### 環境設定結束 | Environment settings ended ######
 
 ###### 安裝前階段 | Pre-install phase ######
-##先取得超級管理員權限
+##先取得系統管理權限
 #read -p "請輸入您的使用者帳號的密碼：" user_password
-${command_gain_privilege} echo -e "成功取得超級使用者(superuser, root)權限。"
+${command_gain_privilege} echo -e "成功取得系統管理（即超級使用者(superuser)或 root 使用者）權限。"
 
 echo -e "
 ========================================
